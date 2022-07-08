@@ -5,6 +5,7 @@ export default {
   data: function () {
     return {
       media: [],
+      images: [],
     };
   },
   created: function () {
@@ -26,10 +27,11 @@ export default {
     <h1>Media</h1>
     <div v-for="medium in media" v-bind:key="medium.id">
       <h2>Name: {{ medium.name }}</h2>
-      <h3>Latest:{{ medium.latest }}</h3>
+      <h3>Latest: {{ medium.latest }}</h3>
       <h4>Type: {{ medium.media_type }}</h4>
-      <h5>Status: {{ medium.status }}</h5>
-      <h6>Images: {{ medium.images }}</h6>
+      <h4>Status: {{ medium.status }}</h4>
+      <h4>Images: {{ medium.images }}</h4>
+      <router-link v-bind:to="`/media/${medium.id}`">More Info</router-link>
     </div>
   </div>
 </template>
