@@ -6,14 +6,15 @@ export default {
     return {
       media: [],
       images: [],
-      newTrackerParams: {},
       trackers: [],
+      newTrackerParams: {},
+      editTrackerParams: {},
       currentTracker: {},
     };
   },
   created: function () {
     this.indexMedia();
-    this.showTrackers();
+    this.indexTracker();
   },
   methods: {
     indexMedia: function () {
@@ -22,16 +23,17 @@ export default {
         this.media = response.data;
       });
     },
-    showTrackers: function () {
+    indexTracker: function () {
       axios.get("/trackers" + ".json").then((response) => {
         console.log("trackers index", response);
         this.trackers = response.data;
       });
     },
-    newTracker: function (medium) {
+    createTracker: function (medium) {
       var tracker = {
         medium_id: medium.id,
-        current: this.newTrackerParams.current,
+        current: medium.current,
+        progress: medium.progress,
       };
       axios
         .post("/trackers.json", tracker)
@@ -44,36 +46,74 @@ export default {
           console.log("trackers create error", error.response);
         });
     },
+    showTracker: function (tracker) {
+      this.currentTracker = tracker;
+      this.editTrackerParams = tracker;
+      document.querySelector("#tracker-details").showModal("show");
+    },
+    updateTracker: function () {
+      var tracker = {
+        current: this.editTrackerParams.current,
+        progress: this.editTrackerParams.progress,
+      };
+      axios
+        .patch("/trackers/" + this.editTrackerParams.id + ".json", tracker)
+        .then((response) => {
+          console.log("trackers edit", response);
+          this.trackers.push(response.data);
+          this.editTrackerParams = {};
+        })
+        .catch((error) => {
+          console.log("trackers update error", error.response);
+        });
+    },
   },
 };
 </script>
 
+<!-- <template>
+  <div class="media-index">
+    <h1></h1>
+  </div>
+</template> -->
+
 <template>
   <div class="media-index">
-    <div id="trackers">
-      <h1>Trackers</h1>
-      <div v-for="tracker in trackers" v-bind:key="tracker.id">
-        <h2>Name: {{ tracker.name }}</h2>
-        <h3>Latest: {{ tracker.latest }}</h3>
-        <h4>Type: {{ tracker.media_type }}</h4>
-        <h4>Status: {{ tracker.status }}</h4>
-        <h4>Progress: {{ tracker.progress }}</h4>
-        <h4>Current: {{ tracker.current }}</h4>
-      </div>
+    <h1>Trackers</h1>
+    <div v-for="tracker in trackers" v-bind:key="tracker.id">
+      <h2>{{ tracker.name }}</h2>
+      <h3>Latest: {{ tracker.latest }}</h3>
+      <h3>Type: {{ tracker.media_type }}</h3>
+      <h3>Status: {{ tracker.status }}</h3>
+      <h3>Progress: {{ tracker.progress }}</h3>
+      <h3>Current: {{ tracker.current }}</h3>
+      <button v-on:click="showTracker(tracker)">Tracker</button>
     </div>
+    <dialog id="tracker-details">
+      <form method="dialog">
+        Current:
+        <input type="text" v-model="editTrackerParams.current" />
+        Progress:
+        <input type="text" v-model="editTrackerParams.progress" />
+        <button v-on:click="updateTracker(currentTracker)">Edit Tracker</button>
+        <button>Close</button>
+      </form>
+    </dialog>
     <div>
       <h1>Media</h1>
       <div v-for="medium in media" v-bind:key="medium.id">
-        <h2>Name: {{ medium.name }}</h2>
+        <h2>{{ medium.name }}</h2>
         <h3>Latest: {{ medium.latest }}</h3>
-        <h4>Type: {{ medium.media_type }}</h4>
-        <h4>Status: {{ medium.status }}</h4>
-        <h4>Images: {{ medium.images }}</h4>
+        <h3>Type: {{ medium.media_type }}</h3>
+        <h3>Status: {{ medium.status }}</h3>
+        <h3>Images: {{ medium.images }}</h3>
         <div>
           <router-link v-bind:to="`/media/${medium.id}`">More Info</router-link>
           Current:
-          <input type="text" v-model="newTrackerParams.current" />
-          <button v-on:click="newTracker(medium)">Create Tracker</button>
+          <input type="text" v-model="medium.current" />
+          Progress:
+          <input type="text" v-model="medium.progress" />
+          <button v-on:click="createTracker(medium)">Create Tracker</button>
         </div>
       </div>
     </div>
