@@ -46,8 +46,8 @@ export default {
           console.log("trackers create error", error.response);
         });
     },
-    showTracker: function (tracker) {
-      tracker.isEdit = true;
+    show: function (item) {
+      item.isEdit = true;
     },
     updateTracker: function (tracker) {
       axios
@@ -75,7 +75,7 @@ export default {
       <div v-if="!tracker.isEdit">
         <h3>Progress: {{ tracker.progress }}</h3>
         <h3>Current: {{ tracker.current }}</h3>
-        <button v-on:click="showTracker(tracker)">Tracker</button>
+        <button v-on:click="show(tracker)">Tracker</button>
       </div>
       <div v-if="tracker.isEdit">
         Current:
@@ -90,16 +90,28 @@ export default {
       <div v-for="medium in media" v-bind:key="medium.id">
         <h2>{{ medium.name }}</h2>
         <h3>Latest: {{ medium.latest }}</h3>
-        <!-- <h3>Type: {{ medium.media_type }}</h3> -->
-        <h3>Status: {{ medium.status }}</h3>
-        <div>
+        <h3>{{ medium.status }}</h3>
+        <button>
+          <router-link v-bind:to="`/media/${medium.id}`">More Info</router-link>
+        </button>
+        <div v-if="!medium.isEdit">
+          <button v-on:click="show(medium)">Create</button>
+        </div>
+        <div v-if="medium.isEdit">
+          Current:
+          <input type="text" v-model="medium.current" />
+          <!-- Progress: -->
+          <!-- <input type="text" v-model="medium.progress" /> -->
+          <button v-on:click="createTracker(medium)">Create Tracker</button>
+        </div>
+        <!-- <div>
           <router-link v-bind:to="`/media/${medium.id}`">More Info</router-link>
           Current:
           <input type="text" v-model="medium.current" />
           Progress:
           <input type="text" v-model="medium.progress" />
           <button v-on:click="createTracker(medium)">Create Tracker</button>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
