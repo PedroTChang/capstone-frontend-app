@@ -47,21 +47,14 @@ export default {
         });
     },
     showTracker: function (tracker) {
-      this.currentTracker = tracker;
-      this.editTrackerParams = tracker;
-      document.querySelector("#tracker-details").showModal("show");
+      tracker.isEdit = true;
     },
-    updateTracker: function () {
-      var tracker = {
-        current: this.editTrackerParams.current,
-        progress: this.editTrackerParams.progress,
-      };
+    updateTracker: function (tracker) {
       axios
-        .patch("/trackers/" + this.editTrackerParams.id + ".json", tracker)
+        .patch("/trackers/" + tracker.id + ".json", tracker)
         .then((response) => {
           console.log("trackers edit", response);
-          this.trackers.push(response.data);
-          this.editTrackerParams = {};
+          tracker.isEdit = false;
         })
         .catch((error) => {
           console.log("trackers update error", error.response);
@@ -71,12 +64,6 @@ export default {
 };
 </script>
 
-<!-- <template>
-  <div class="media-index">
-    <h1></h1>
-  </div>
-</template> -->
-
 <template>
   <div class="media-index">
     <h1>Trackers</h1>
@@ -85,28 +72,26 @@ export default {
       <h3>Latest: {{ tracker.latest }}</h3>
       <h3>Type: {{ tracker.media_type }}</h3>
       <h3>Status: {{ tracker.status }}</h3>
-      <h3>Progress: {{ tracker.progress }}</h3>
-      <h3>Current: {{ tracker.current }}</h3>
-      <button v-on:click="showTracker(tracker)">Tracker</button>
-    </div>
-    <dialog id="tracker-details">
-      <form method="dialog">
+      <div v-if="!tracker.isEdit">
+        <h3>Progress: {{ tracker.progress }}</h3>
+        <h3>Current: {{ tracker.current }}</h3>
+        <button v-on:click="showTracker(tracker)">Tracker</button>
+      </div>
+      <div v-if="tracker.isEdit">
         Current:
-        <input type="text" v-model="editTrackerParams.current" />
+        <input type="text" v-model="tracker.current" />
         Progress:
-        <input type="text" v-model="editTrackerParams.progress" />
-        <button v-on:click="updateTracker(currentTracker)">Edit Tracker</button>
-        <button>Close</button>
-      </form>
-    </dialog>
+        <input type="text" v-model="tracker.progress" />
+        <button v-on:click="updateTracker(tracker)">Edit Tracker</button>
+      </div>
+    </div>
     <div>
       <h1>Media</h1>
       <div v-for="medium in media" v-bind:key="medium.id">
         <h2>{{ medium.name }}</h2>
         <h3>Latest: {{ medium.latest }}</h3>
-        <h3>Type: {{ medium.media_type }}</h3>
+        <!-- <h3>Type: {{ medium.media_type }}</h3> -->
         <h3>Status: {{ medium.status }}</h3>
-        <h3>Images: {{ medium.images }}</h3>
         <div>
           <router-link v-bind:to="`/media/${medium.id}`">More Info</router-link>
           Current:
