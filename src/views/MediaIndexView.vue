@@ -60,6 +60,13 @@ export default {
           console.log("trackers update error", error.response);
         });
     },
+    destroyTracker: function (tracker) {
+      axios.delete("/trackers/" + tracker.id).then((response) => {
+        console.log("trackers destroy", response);
+        var index = this.trackers.indexOf(tracker);
+        this.trackers.splice(index, 1);
+      });
+    },
   },
 };
 </script>
@@ -163,6 +170,9 @@ export default {
                           <input type="text" v-model="tracker.progress" />
                           <button v-on:click="updateTracker(tracker)">
                             Edit Tracker
+                          </button>
+                          <button v-on:click="destroyTracker(tracker)">
+                            Delete
                           </button>
                         </div></small
                       >
