@@ -302,9 +302,16 @@ export default {
                       </a>
                     </th>
                     <td class="text-center">
-                      <span class="badge rounded-md bg-soft-success">{{
-                        medium.status
-                      }}</span>
+                      <div v-if="medium.status == 'Finished Airing'">
+                        <span class="badge rounded-md bg-soft-info">{{
+                          medium.status
+                        }}</span>
+                      </div>
+                      <div v-if="medium.status == 'Currently Airing'">
+                        <span class="badge rounded-md bg-soft-success">{{
+                          medium.status
+                        }}</span>
+                      </div>
                     </td>
                     <td class="text-center">
                       <ul class="list-unstyled text-warning mb-0">
