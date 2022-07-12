@@ -66,6 +66,7 @@ export default {
 
 <template>
   <div class="media-index">
+    <!-- Start -->
     <section class="section">
       <div class="container">
         <div class="row">
@@ -96,7 +97,7 @@ export default {
                       class="fw-normal text-center text-muted py-4"
                       style="width: 200px; min-width: 150px"
                     >
-                      Status
+                      Progress
                     </th>
                     <th
                       scope="col"
@@ -182,6 +183,181 @@ export default {
               class="d-md-flex align-items-center text-center justify-content-between"
             >
               <span class="text-muted me-3">Showing 1</span>
+              <ul class="pagination justify-content-center mb-0 mt-3 mt-sm-0">
+                <li class="page-item">
+                  <a
+                    class="page-link"
+                    href="javascript:void(0)"
+                    aria-label="Previous"
+                    >Prev</a
+                  >
+                </li>
+                <li class="page-item active">
+                  <a class="page-link" href="javascript:void(0)">1</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="javascript:void(0)">2</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="javascript:void(0)">3</a>
+                </li>
+                <li class="page-item">
+                  <a
+                    class="page-link"
+                    href="javascript:void(0)"
+                    aria-label="Next"
+                    >Next</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div> -->
+          <!--end col-->
+          <!-- PAGINATION END -->
+        </div>
+        <!--end row-->
+      </div>
+      <!--end container-->
+    </section>
+    <!--end section-->
+    <!-- End -->
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title mb-4">
+              <h4>Media</h4>
+            </div>
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="table-responsive bg-white shadow rounded">
+              <table class="table mb-0 table-center">
+                <thead>
+                  <tr>
+                    <th
+                      scope="col"
+                      class="fw-normal text-muted py-4"
+                      style="min-width: 250px"
+                    >
+                      Name
+                    </th>
+                    <th
+                      scope="col"
+                      class="fw-normal text-center text-muted py-4"
+                      style="width: 200px; min-width: 150px"
+                    >
+                      Status
+                    </th>
+                    <th
+                      scope="col"
+                      class="fw-normal text-center text-muted py-4"
+                      style="width: 200px; min-width: 150px"
+                    >
+                      Type
+                    </th>
+                    <th
+                      scope="col"
+                      class="fw-normal text-center text-muted py-4"
+                      style="width: 250px; min-width: 150px"
+                    >
+                      Latest
+                    </th>
+                    <th
+                      scope="col"
+                      class="fw-normal text-end text-muted py-4"
+                      style="width: 150px; min-width: 150px"
+                    ></th>
+                  </tr>
+                </thead>
+
+                <tbody v-for="medium in media" v-bind:key="medium.id">
+                  <tr>
+                    <th class="py-3">
+                      <a href="#!" class="align-items-center">
+                        <!-- <img
+                          src="images/coin/bitcoin.png"
+                          class="me-3"
+                          height="32"
+                          alt=""
+                        /> -->
+                        <p class="mb-0 d-inline text-dark fw-normal h6">
+                          {{ medium.name }} <span class="text-muted"></span>
+                        </p>
+                      </a>
+                    </th>
+                    <td class="text-center">
+                      <span class="badge rounded-md bg-soft-success">{{
+                        medium.status
+                      }}</span>
+                    </td>
+                    <td class="text-center">
+                      <ul class="list-unstyled text-warning mb-0">
+                        <!-- <li class="list-inline-item mb-0">
+                          <i class="mdi mdi-star"></i>
+                        </li>
+                        <li class="list-inline-item mb-0">
+                          <i class="mdi mdi-star"></i>
+                        </li>
+                        <li class="list-inline-item mb-0">
+                          <i class="mdi mdi-star"></i>
+                        </li>
+                        <li class="list-inline-item mb-0">
+                          <i class="mdi mdi-star"></i>
+                        </li>
+                        <li class="list-inline-item mb-0">
+                          <i class="mdi mdi-star-half"></i>
+                        </li> -->
+                        <li class="list-inline-item mb-0 text-muted small">
+                          {{ medium.media_type }}
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="text-center">
+                      <div class="progress-box px-3">
+                        <small class="title text-muted mb-0">{{
+                          medium.latest
+                        }}</small>
+
+                        <!-- <div class="progress rounded-md mt-2">
+                          <div
+                            class="progress-bar position-relative bg-gradient-primary rounded-md"
+                            style="width: 60%"
+                          ></div>
+                        </div> -->
+                      </div>
+                      <!--end process box-->
+                    </td>
+                    <td class="text-muted text-end">
+                      <div v-if="!medium.isEdit">
+                        <button v-on:click="show(medium)">Add</button>
+                      </div>
+                      <div v-if="medium.isEdit">
+                        Current:
+                        <input type="text" v-model="medium.current" />
+                        <button v-on:click="createTracker(medium)">
+                          Create Tracker
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!--end col-->
+
+          <!-- PAGINATION START -->
+          <!-- <div class="col-12 mt-4 pt-2">
+            <div
+              class="d-md-flex align-items-center text-center justify-content-between"
+            >
+              <span class="text-muted me-3"></span>
               <ul class="pagination justify-content-center mb-0 mt-3 mt-sm-0">
                 <li class="page-item">
                   <a
