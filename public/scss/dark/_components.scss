@@ -1,0 +1,580 @@
+//
+// components.scss
+//
+
+/*********************************/
+/*     Components-DARK           */
+/*===============================*/
+
+//Buttons
+@each $name,
+$value in $colors {
+    .btn-#{$name} {
+        background-color: #{$value} !important;
+        border: 1px solid #{$value} !important;
+        color: $dark !important;
+        box-shadow: 0 3px 5px 0 rgba($value, 0.3);
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: darken($value, 10%) !important;
+            border-color: darken($value, 10%) !important;
+            color: $dark !important;
+        }
+    }
+
+    .btn-soft-#{$name} {
+        background-color: rgba($value, 0.2) !important;
+        border: 1px solid rgba($value, 0.2) !important;
+        color: #{$value} !important;
+        box-shadow: 0 3px 5px 0 rgba($value, 0.3);
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: #{$value} !important;
+            border-color: #{$value} !important;
+            color: $dark !important;
+        }
+    }
+
+    .btn-outline-#{$name} {
+        border: 1px solid #{$value};
+        color: #{$value};
+        background-color: transparent;    
+        &:hover, &:focus, &:active, &.active, &.focus, &:not(:disabled):not(.disabled):active{
+            background-color: #{$value};
+            border-color: #{$value};
+            color: $dark !important;
+            box-shadow: 0 3px 5px 0 rgba($value, 0.3);
+        }
+    }
+}
+.btn {
+    &.btn-dark {
+        color: $white !important;
+        background: $dark;
+        border: 1px solid $gray-100 !important;
+        &:hover, &:focus, &:active, &.active, &.focus {
+            background-color: darken($dark, 5%) !important;
+            color: $white !important; 
+        }
+    }    
+    &.btn-soft-dark {
+        color: rgba($dark, 0.5) !important;
+        border: 1px solid $gray-100 !important;
+        &:hover, &:focus, &:active, &.active, &.focus{
+            color: $white !important; 
+        }
+    }    
+    &.btn-outline-dark {
+        border: 1px solid $gray-100 !important;
+        color: $dark !important;
+        background-color: transparent;    
+        &:hover, &:focus, &:active, &.active, &.focus {
+            background-color: $dark !important;
+            color: $white !important;
+        }
+    }
+    &.btn-light {
+        color: $dark !important;
+        border-color: darken($gray-200, 15%) !important;
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: lighten($light, 10%) !important;
+            color: $dark !important;
+        }
+    }    
+    &.btn-soft-light {
+        color: rgba($dark, 0.5) !important;
+        border: 1px solid darken($gray-200, 15%) !important;
+        &:hover, &:focus, &:active, &.active, &.focus{
+            color: $dark !important; 
+        }
+    }    
+    &.btn-outline-light {
+        border-color: darken($gray-200, 15%) !important;
+        color: $dark !important;
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: lighten($light, 10%) !important;
+            color: $dark !important;
+        }
+    }
+}
+
+button:not(:disabled) {
+    outline: none;
+}
+//Shadow 
+.shadow {
+    box-shadow: $shadow !important;
+}
+
+.shadow-lg {
+    box-shadow: $shadow-lg !important;
+}
+
+//Badges
+@each $name,
+$value in $colors {
+    .badge-#{$name} {
+        background-color: #{$value} !important;
+        color: $dark !important;
+    }
+
+    .badge-outline-#{$name} {
+        background-color: transparent !important;
+        color: #{$value} !important;
+        border: 1px solid #{$value} !important;
+    }
+}
+.badge {
+    &.badge-dark {
+        color: $white !important;
+        background-color: $dark !important;
+    }
+    &.badge-outline-dark {
+        color: $dark !important;
+        border: 1px solid darken($dark, 20%) !important;
+        background-color: transparent !important;
+    }
+    &.badge-light {
+        color: $dark !important;
+        background-color: $light !important;
+    }
+    &.badge-outline-light {
+        border: 1px solid $light !important;
+    }
+}
+
+//Alert
+@each $name,
+$value in $colors {
+    .alert-#{$name} {
+        background-color: lighten($value, 5%);
+        color: $dark;
+        border-color: $value;
+        .alert-link {
+            color: darken($value, 30%);
+        }
+    }
+    .alert-outline-#{$name} {
+        background-color: $white;
+        color: $value;
+        border-color: $value;
+    }
+}
+.alert {
+    &.alert-dark {
+        background-color: $dark;
+        color: $light;
+        border-color: $gray-100;
+    }
+    &.alert-light {
+        background-color: $light;
+        color: $dark;
+        border-color: $light;
+    }
+}
+
+
+//Breadcrumb
+.breadcrumb {
+    .breadcrumb-item {
+        a {
+            color: $dark;
+        }
+        &:after {
+            color: $dark; 
+        }     
+    }
+}
+
+//Pagination
+.pagination {   
+    .page-item {
+        .page-link {
+            color: $gray-300;
+            border: 1px solid $gray-100;
+            background: $white; 
+            &:hover {
+                color: $dark !important;
+            }
+        }
+    }              
+    .active a {
+        color: $dark;
+    }
+}
+
+//Accordion
+.accordion {
+    .accordion-item {
+        .accordion-button {
+            color: $dark;
+            &.collapsed {
+                background-color: $white;
+                &:after {
+                    color: $dark;
+                }
+            }
+        }
+    }
+}
+
+//Processbar
+.progress-box {
+    .progress {
+        background: rgba($gray-100, 0.3);
+    }
+}
+
+//Form
+.form-control {
+    background: $light;
+    color: $gray-300 !important;
+    box-shadow: $shadow;
+    &:focus {
+        background: $white;
+    }
+    &::placeholder{
+        color: $gray-300;
+    }
+
+    &::file-selector-button {
+        color: $muted;
+        background: $light !important;
+        border-right-color: rgba($gray-100, 0.35) !important;
+    }
+}
+
+.form-check-input {
+    background-color: $white;
+    border-color: $gray-100;
+}
+
+
+
+.selectr-selected, .selectr-option {
+    background: $white!important;
+}
+
+.selectr-selected,
+.selectr-options-container,
+.selectr-selected,
+.selectr-option.active,
+.selectr-option.selected,
+.selectr-input {
+    border: 1px solid $gray-100 !important;
+}
+.selectr-container.open .selectr-selected {
+    border-color: $gray-100 $gray-100 transparent;
+}
+
+//Nav
+.nav-pills {
+    background: darken($light, 1%);
+    .nav-link {
+        color: $gray-300 !important;
+        &.nav-link-alt {
+            color: $gray-300 !important;
+            &.active {
+                background: $dark !important;
+            }
+        }
+        &.active {
+            color: $dark !important;
+            .tab-para {
+                color: rgba($white, 0.65) !important;
+            }
+        }
+    }
+}
+
+//Subscribe form
+.subcribe-form {
+    input {
+        background-color: rgba($white, 0.8);
+        color: $gray-300 !important;
+        &::placeholder{
+            color: $gray-300 !important;
+        }
+    }
+}
+
+//Table
+.table-responsive {
+    .table {
+        color: $dark;
+        td,
+        th {
+            border-color: darken($gray-100, 15%) !important;
+        }
+    } 
+    .table-center {
+        tbody {
+            tr {
+                &:hover {
+                    color: $dark;
+                    background-color: $light !important;
+                }
+            }
+        }
+    }
+}
+.table {
+    border-color: $gray-100;
+}
+
+// Loader
+#preloader {
+    background-image: linear-gradient(45deg, $white, $white);
+}
+
+//Social icons
+.social-icon,
+.social-icon .social {
+    li {
+        a {
+            color: $gray-200;
+            border-color: $gray-200;
+            &:hover {
+                color: $dark !important;
+            }
+        }
+    }
+}
+.social-icon {
+    &.foot-social-icon {
+        li {
+            a {
+                color: $gray-300;
+                border-color: lighten($footer, 5%);
+            }
+        }
+    }
+}
+
+//back to top
+.back-to-top {
+    color: $dark;
+    background-color: $gray-100;
+    box-shadow: $shadow;
+    &:hover {
+        color: $white;
+    }
+}
+
+//countdown
+#countdown, #token-sale {
+    .count-down {
+        color: $dark !important;
+    }
+}
+
+//Event(index-event.html)
+#token-sale {
+    .count-down {
+        border: 0;
+        color: $dark !important;
+    }
+}
+
+//Footer
+footer {
+    .logo-footer {
+        color: $dark;
+    }
+    .footer-head {
+        color: $dark !important;
+    }
+    .foot-subscribe {
+        .form-control {
+            background-color: lighten($footer, 2%);
+            border: 1px solid lighten($footer, 2%);
+            color: $light;
+        }
+        &.foot-white {
+            .form-control {
+                color: $gray-300;
+            }
+        }
+        input{
+            &::placeholder{
+                color: $gray-300;
+            }
+        }
+    } 
+    .text-foot {
+        color: $gray-300;
+    }
+    .footer-list {
+        li {
+            a {
+                &:hover {
+                    color: lighten($gray-300, 20%);
+                }
+            }         
+        }
+    }    
+    &.footer-border-top,
+    .footer-border-top {
+        border-top: 1px solid lighten($footer, 5%);
+    }
+}
+
+//Home(Hero section)
+@mixin home-common {
+    background-size: cover;
+    align-self: center;
+    position: relative;
+    background-position: center center;
+}
+
+.shape {
+    &.integration-hero {
+        background: $white;
+    }
+}
+
+//Testi
+.tns-nav {
+    button {
+        border: 2px solid rgba($white, 0.5);
+    }
+}
+
+//Blog
+.tagcloud {
+    > a {
+        background: $light !important;
+        color: $gray-300 !important;
+        &:hover {
+            color: $dark !important;
+        }
+    }
+}
+
+.widget {
+    .widget-search, .searchform { 
+        input[type="text"] {
+            box-shadow: none;
+            padding: 12px 15px;
+            height: 45px;
+            font-size: 14px;
+            display: block;
+            width: 100%;
+            outline: none !important;
+            padding-right: 45px;
+            background-color: $white;
+        }
+        input[type="submit"] {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            opacity: 0;
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .widget-search {
+        .searchform:after {
+            content: "\F0349";
+            position: absolute;
+            font-family: "Material Design Icons";
+            right: 16px;
+            top: 15px;
+            font-size: 20px;
+            line-height: 20px;
+            pointer-events: none;
+        }
+    }
+}
+
+//Price
+.calculator-block {
+    background-color: $white;
+    .cryptonatorwidget {
+        background: $light !important;
+        input,
+        select {
+            background-color:$light !important;
+            box-shadow: $shadow;
+            color: $gray-300;
+        }
+    }
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $gray-300;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+        color: $gray-300;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+        color: $gray-300;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+        color: $gray-300;
+    }
+}
+
+//Apexcharts
+.apexcharts-tooltip {
+    background: $white !important;
+    color: $dark;
+}
+
+// Filter
+.container-filter {
+    li {
+        margin: 0px 15px 10px !important;
+        font-size: 14px;
+        letter-spacing: 0.8px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        color: $muted !important;
+        border-bottom: 1px solid transparent;
+        font-weight: 500;
+        &.active,
+        &:hover {
+            color: $dark !important;
+            border-bottom-color: $dark;
+        }
+    }
+}
+
+//NFT Items
+.nft-items {
+    @each $name,
+    $value in $colors {
+        &.nft-item-#{$name} {
+            .content {
+                .title {
+                    transition: all 0.5s ease;
+                    &:hover {
+                        color: $value !important;
+                    }
+                }
+                .author {
+                    .name {
+                        &:hover {
+                            color: $value !important;
+                        }
+                    }
+                }
+            }
+
+            .bg-color {
+                background-color: #{$value} !important;
+            }
+        }
+    }
+}
+
+.nft-items {
+    .nft-image {
+        .like {
+            background: $white;
+            -webkit-text-stroke: 1px $dark;
+        }
+    }
+    .content {
+        
+        .like {
+            -webkit-text-stroke: 1px $dark;
+        }
+    }
+}

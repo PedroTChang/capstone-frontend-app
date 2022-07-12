@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Upcrypto - NFT Marketplace & Cryptocurrency ICO Landing Page HTML Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="NFT Marketplace & Cryptocurrency ICO Landing Page HTML Template" />
+        <meta name="keywords" content="Bitcoin, Cryptocurrency, Crypto, BTC, Cryptocoin, Buy Crypto, Sell Crypto" />
+        <meta content="Shreethemes" name="author" />
+        <meta content="support@shreethemes.in" name="Email" />
+        <meta content="https://shreethemes.in/" name="Website" />
+        <meta content="1.3.0" name="version" />
+        <!-- favicon -->
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/tiny-slider.css" rel="stylesheet" />
+        <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" rel="stylesheet">
+        <!-- Main css -->
+        <link href="css/style.css" rel="stylesheet" type="text/css" id="theme-opt" />
+        <link href="css/colors/default.css" rel="stylesheet" id="color-opt">
+
+    </head>
+
+    <body>
+        <!-- Loader -->
+        <!-- <div id="preloader">
+            <div id="status">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Loader -->
+
+        <!-- Navbar STart -->
+        <header id="topnav" class="defaultscroll sticky">
+            <div class="container">
+                <!-- Logo Start-->
+                <a class="logo" href="index.html">
+                    <span class="logo-light-mode">
+                        <img src="images/logo-dark.png" class="l-dark" alt="">
+                        <img src="images/logo-light.png" class="l-light" alt="">
+                    </span>
+                    <img src="images/logo-light.png" class="logo-dark-mode" alt="">
+                </a>
+                <!-- Logo end-->
+
+                <!-- Mobile -->
+                <div class="menu-extras">
+                    <div class="menu-item">
+                        <!-- Mobile menu toggle-->
+                        <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                            <div class="lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                        <!-- End mobile menu toggle-->
+                    </div>
+                </div>
+                <!-- Mobile -->
+
+                <!--Login button Start-->
+                <ul class="buy-button list-inline mb-0">
+                    <li class="list-inline-item search-icon mb-0">
+                        <a href="javascript:void(0)" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                            <!-- <i class="uil uil-search fs-5 align-middle text-dark mb-0"></i> -->
+                            <i class="uil uil-search fs-5 align-middle text-dark nav-light-icon-dark mb-0"></i>
+                            <i class="uil uil-search fs-5 align-middle text-white nav-light-icon-white mb-0"></i>
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item ms-2">
+                        <a href="nft-creator-profile.html"><img src="images/client/01.jpg" class="rounded-pill avatar avatar-sm-sm" alt=""></a>
+                    </li>
+                </ul>
+                <!--Login button End-->
+        
+                <div id="navigation">
+                    <!-- Navigation Menu-->   
+                    <ul class="navigation-menu nav-right nav-light">
+                        <li class="has-submenu parent-menu-item">
+                            <a href="javascript:void(0)">Demos</a><span class="menu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="index-nft.html" class="sub-menu-item">NFT One</a></li>
+                                <li><a href="index-nft-two.html" class="sub-menu-item">NFT Two</a></li>
+                                <li><a href="index-nft-three.html" class="sub-menu-item">NFT Three</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="nft-faqs.html" class="sub-menu-item">How it works!</a></li>
+        
+                        <li class="has-submenu parent-parent-menu-item">
+                            <a href="javascript:void(0)">Creator</a><span class="menu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="nft-creators.html" class="sub-menu-item"> Creators</a></li>
+                                <li><a href="nft-creator-profile.html" class="sub-menu-item"> Creator Profile</a></li>
+                                <li><a href="nft-creator-setting.html" class="sub-menu-item"> Creator Settings</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="has-submenu parent-parent-menu-item">
+                            <a href="javascript:void(0)">Explore</a><span class="menu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="nft-explore.html" class="sub-menu-item"> Explore</a></li>
+                                <li><a href="nft-collection.html" class="sub-menu-item"> Collections</a></li>
+                                <li><a href="nft-item-detail.html" class="sub-menu-item">Item Detail</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="nft-upload-work.html" class="sub-menu-item">Upload Works</a></li>
+                        <li><a href="index.html" target="_blank" class="sub-menu-item">Cryptocurrency</a></li>
+                    </ul><!--end navigation menu-->
+                </div><!--end navigation-->
+            </div><!--end container-->
+        </header><!--end header-->
+        <!-- Navbar End -->
+
+        <!-- Start Hero -->
+        <section class="bg-half-170 d-table w-100" style="background: url('images/nft/bg/bg01.jpg') right;">
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="title-heading">
+                            <h5 class="text-white-50 fw-normal">Buy And Sell Digital Art Products</h5>
+                            <h4 class="heading fw-bold text-white title-dark mb-4">One Stop <span class="gradient-text">NFT Marketplace</span></h4>
+
+                            <p class="text-white-50 para-desc">Discover limited-edition digital arts. <br> Create, Sell and Buy now.</p>
+
+                            <div class="mt-4">
+                                <a href="nft-explore.html" class="btn btn-primary">Upload your work</a>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- End Hero -->
+
+        <!-- Start -->
+        <section class="section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <div class="filters-group-wrap">
+                            <div class="filters-group">
+                                <ul class="container-filter mb-0 categories-filter list-unstyled filter-options">
+                                    <li class="list-inline-item categories position-relative active" data-group="all">All</li>
+                                    <li class="list-inline-item categories position-relative" data-group="recents">Recents Items</li>
+                                    <li class="list-inline-item categories position-relative" data-group="free">Free Items</li>
+                                    <li class="list-inline-item categories position-relative" data-group="top">Top Items</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+
+                    <div class="col-md-4 text-end d-none d-md-block">
+                        <a href="nft-explore.html" class="btn btn-primary">See More Items <i class="uil uil-arrow-right"></i></a>
+                    </div>
+                </div><!--end row-->
+
+                <div id="grid" class="row row-cols-lg-5 row-cols-md-3">
+                    <div class="col picture-item mt-4 pt-2" data-groups='["recents"]'>
+                        <div class="nft-items nft-item-primary">
+                            <div class="nft-image position-relative overflow-hidden rounded-md shadow-md">
+                                <img src="images/nft/500/1.jpg" class="img-fluid" alt="">
+                                <div class="pop-icon">
+                                    <a href="nft-item-detail.html" class="btn bg-white btn-pills btn-icon shadow"><i class="uil uil-arrow-right text-dark"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="content pt-3">
+                                <a href="nft-item-detail.html" class="title h6 mb-1 text-dark d-block">The future of ETH</a>
+                                <small class="gradient-text d-block">0.75ETH</small>
+
+                                <ul class="pt-3 mt-2 border-top d-flex justify-content-between align-items-center list-unstyled">
+                                    <li class="d-flex author align-items-center">
+                                        <div class="position-relative">
+                                            <img src="images/client/01.jpg" class="avatar avatar-sm-sm rounded-pill shadow" alt="">
+                                            <div class="position-absolute top-0 start-0 translate-middle pt-2 ps-2">
+                                                <i class="mdi mdi-check-circle mdi-18px text-success"></i>
+                                            </div>
+                                        </div>
+                                        <a href="nft-creator-profile.html" class="ps-2 text-dark name">Jordan</a>
+                                    </li>
+
+                                    <li>
+                                        <span>23 <a href="javascrpit:void(0)" class="like"><i class="mdi mdi-heart align-middle"></i></a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+
+                    <div class="col picture-item mt-4 pt-2" data-groups='["free"]'>
+                        <div class="nft-items nft-item-primary">
+                            <div class="nft-image position-relative overflow-hidden rounded-md shadow-md">
+                                <img src="images/nft/500/2.jpg" class="img-fluid" alt="">
+                                <div class="pop-icon">
+                                    <a href="nft-item-detail.html" class="btn bg-white btn-pills btn-icon shadow"><i class="uil uil-arrow-right text-dark"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="content pt-3">
+                                <a href="nft-item-detail.html" class="title h6 mb-1 text-dark d-block">ETH never die</a>
+                                <small class="gradient-text d-block">0.75ETH</small>
+
+                                <ul class="pt-3 mt-2 border-top d-flex justify-content-between align-items-center list-unstyled">
+                                    <li class="d-flex author align-items-center">
+                                        <div class="position-relative">
+                                            <img src="images/client/02.jpg" class="avatar avatar-sm-sm rounded-pill shadow" alt="">
+                                            <div class="position-absolute top-0 start-0 translate-middle pt-2 ps-2">
+                                                <i class="mdi mdi-check-circle mdi-18px text-success"></i>
+                                            </div>
+                                        </div>
+                                        <a href="nft-creator-profile.html" class="ps-2 text-dark name">Sofia</a>
+                                    </li>
+
+                                    <li>
+                                        <span>23 <a href="javascrpit:void(0)" class="like"><i class="mdi mdi-heart align-middle"></i></a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+
+                    <div class="col picture-item mt-4 pt-2" data-groups='["top"]'>
+                        <div class="nft-items nft-item-primary">
+                            <div class="nft-image position-relative overflow-hidden rounded-md shadow-md">
+                                <img src="images/nft/500/3.jpg" class="img-fluid" alt="">
+                                <div class="pop-icon">
+                                    <a href="nft-item-detail.html" class="btn bg-white btn-pills btn-icon shadow"><i class="uil uil-arrow-right text-dark"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="content pt-3">
+                                <a href="nft-item-detail.html" class="title h6 mb-1 text-dark d-block">Future coming soon</a>
+                                <small class="gradient-text d-block">0.75ETH</small>
+
+                                <ul class="pt-3 mt-2 border-top d-flex justify-content-between align-items-center list-unstyled">
+                                    <li class="d-flex author align-items-center">
+                                        <div class="position-relative">
+                                            <img src="images/client/03.jpg" class="avatar avatar-sm-sm rounded-pill shadow" alt="">
+                                            <div class="position-absolute top-0 start-0 translate-middle pt-2 ps-2">
+                                                <i class="mdi mdi-check-circle mdi-18px text-success"></i>
+                                            </div>
+                                        </div>
+                                        <a href="nft-creator-profile.html" class="ps-2 text-dark name">Cristina</a>
+                                    </li>
+
+                                    <li>
+                                        <span>23 <a href="javascrpit:void(0)" class="like"><i class="mdi mdi-heart align-middle"></i></a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+
+                    <div class="col picture-item mt-4 pt-2" data-groups='["recents"]'>
+                        <div class="nft-items nft-item-primary">
+                            <div class="nft-image position-relative overflow-hidden rounded-md shadow-md">
+                                <img src="images/nft/500/4.jpg" class="img-fluid" alt="">
+                                <div class="pop-icon">
+                                    <a href="nft-item-detail.html" class="btn bg-white btn-pills btn-icon shadow"><i class="uil uil-arrow-right text-dark"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="content pt-3">
+                                <a href="nft-item-detail.html" class="title h6 mb-1 text-dark d-block">Elon Musk silver coin</a>
+                                <small class="gradient-text d-block">0.75ETH</small>
+
+                                <ul class="pt-3 mt-2 border-top d-flex justify-content-between align-items-center list-unstyled">
+                                    <li class="d-flex author align-items-center">
+                                        <div class="position-relative">
+                                            <img src="images/client/04.jpg" class="avatar avatar-sm-sm rounded-pill shadow" alt="">
+                                            <div class="position-absolute top-0 start-0 translate-middle pt-2 ps-2">
+                                                <i class="mdi mdi-check-circle mdi-18px text-success"></i>
+                                            </div>
+                                        </div>
+                                        <a href="nft-creator-profile.html" class="ps-2 text-dark name">Jack</a>
+                                    </li>
+
+                                    <li>
+                                        <span>23 <a href="javascrpit:void(0)" class="like"><i class="mdi mdi-heart align-middle"></i></a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+
+                    <div class="col picture-item mt-4 pt-2" data-groups='["free"]'>
+                        <div class="nft-items nft-item-primary">
+                            <div class="nft-image position-relative overflow-hidden rounded-md shadow-md">
+                                <img src="images/nft/500/5.jpg" class="img-fluid" alt="">
+                                <div class="pop-icon">
+                                    <a href="nft-item-detail.html" class="btn bg-white btn-pills btn-icon shadow"><i class="uil uil-arrow-right text-dark"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="content pt-3">
+                                <a href="nft-item-detail.html" class="title h6 mb-1 text-dark d-block">Amazing digital art</a>
+                                <small class="gradient-text d-block">0.75ETH</small>
+
+                                <ul class="pt-3 mt-2 border-top d-flex justify-content-between align-items-center list-unstyled">
+                                    <li class="d-flex author align-items-center">
+                                        <div class="position-relative">
+                                            <img src="images/client/05.jpg" class="avatar avatar-sm-sm rounded-pill shadow" alt="">
+                                            <div class="position-absolute top-0 start-0 translate-middle pt-2 ps-2">
+                                                <i class="mdi mdi-check-circle mdi-18px text-success"></i>
+                                            </div>
+                                        </div>
+                                        <a href="nft-creator-profile.html" class="ps-2 text-dark name">Lilia</a>
+                                    </li>
+
+                                    <li>
+                                        <span>23 <a href="javascrpit:void(0)" class="like"><i class="mdi mdi-heart align-middle"></i></a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+
+                    <div class="col picture-item mt-4 pt-2" data-groups='["top"]'>
+                        <div class="nft-items nft-item-primary">
+                            <div class="nft-image position-relative overflow-hidden rounded-md shadow-md">
+                                <img src="images/nft/500/6.jpg" class="img-fluid" alt="">
+                                <div class="pop-icon">
+                                    <a href="nft-item-detail.html" class="btn bg-white btn-pills btn-icon shadow"><i class="uil uil-arrow-right text-dark"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="content pt-3">
+                                <a href="nft-item-detail.html" class="title h6 mb-1 text-dark d-block">Ribbon Hunter</a>
+                                <small class="gradient-text d-block">0.75ETH</small>
+
+                                <ul class="pt-3 mt-2 border-top d-flex justify-content-between align-items-center list-unstyled">
+                                    <li class="d-flex author align-items-center">
+                                        <div class="position-relative">
+                                            <img src="images/client/06.jpg" class="avatar avatar-sm-sm rounded-pill shadow" alt="">
+                                            <div class="position-absolute top-0 start-0 translate-middle pt-2 ps-2">
+                                                <i class="mdi mdi-check-circle mdi-18px text-success"></i>
+                                            </div>
+                                        </div>
+                                        <a href="nft-creator-profile.html" class="ps-2 text-dark name">Anderson</a>
+                                    </li>
+
+                                    <li>
+                                        <span>23 <a href="javascrpit:void(0)" class="like"><i class="mdi mdi-heart align-middle"></i></a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+
+                    <div class="col picture-item mt-4 pt-2" data-groups='["recents"]'>
+                        <div class="nft-items nft-item-primary">
+                            <div class="nft-image position-relative overflow-hidden rounded-md shadow-md">
+                                <img src="images/nft/500/7.jpg" class="img-fluid" alt="">
+                                <div class="pop-icon">
+                                    <a href="nft-item-detail.html" class="btn bg-white btn-pills btn-icon shadow"><i class="uil uil-arrow-right text-dark"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="content pt-3">
+                                <a href="nft-item-detail.html" class="title h6 mb-1 text-dark d-block">Amazing digital art</a>
+                                <small class="gradient-text d-block">0.75ETH</small>
+
+                                <ul class="pt-3 mt-2 border-top d-flex justify-content-between align-items-center list-unstyled">
+                                    <li class="d-flex author align-items-center">
+                                        <div class="position-relative">
+                                            <img src="images/client/07.jpg" class="avatar avatar-sm-sm rounded-pill shadow" alt="">
+                                            <div class="position-absolute top-0 start-0 translate-middle pt-2 ps-2">
+                                                <i class="mdi mdi-check-circle mdi-18px text-success"></i>
+                                            </div>
+                                        </div>
+                                        <a href="nft-creator-profile.html" class="ps-2 text-dark name">Joe</a>
+                                    </li>
+
+                                    <li>
+                                        <span>23 <a href="javascrpit:void(0)" class="like"><i class="mdi mdi-heart align-middle"></i></a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+
+                    <div class="col picture-item mt-4 pt-2" data-groups='["free"]'>
+                        <div class="nft-items nft-item-primary">
+                            <div class="nft-image position-relative overflow-hidden rounded-md shadow-md">
+                                <img src="images/nft/500/8.jpg" class="img-fluid" alt="">
+                                <div class="pop-icon">
+                                    <a href="nft-item-detail.html" class="btn bg-white btn-pills btn-icon shadow"><i class="uil uil-arrow-right text-dark"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="content pt-3">
+                                <a href="nft-item-detail.html" class="title h6 mb-1 text-dark d-block">The future of ETH</a>
+                                <small class="gradient-text d-block">0.75ETH</small>
+
+                                <ul class="pt-3 mt-2 border-top d-flex justify-content-between align-items-center list-unstyled">
+                                    <li class="d-flex author align-items-center">
+                                        <div class="position-relative">
+                                            <img src="images/client/08.jpg" class="avatar avatar-sm-sm rounded-pill shadow" alt="">
+                                            <div class="position-absolute top-0 start-0 translate-middle pt-2 ps-2">
+                                                <i class="mdi mdi-check-circle mdi-18px text-success"></i>
+                                            </div>
+                                        </div>
+                                        <a href="nft-creator-profile.html" class="ps-2 text-dark name">John</a>
+                                    </li>
+
+                                    <li>
+                                        <span>23 <a href="javascrpit:void(0)" class="like"><i class="mdi mdi-heart align-middle"></i></a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+
+                    <div class="col picture-item mt-4 pt-2" data-groups='["top"]'>
+                        <div class="nft-items nft-item-primary">
+                            <div class="nft-image position-relative overflow-hidden rounded-md shadow-md">
+                                <img src="images/nft/500/9.jpg" class="img-fluid" alt="">
+                                <div class="pop-icon">
+                                    <a href="nft-item-detail.html" class="btn bg-white btn-pills btn-icon shadow"><i class="uil uil-arrow-right text-dark"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="content pt-3">
+                                <a href="nft-item-detail.html" class="title h6 mb-1 text-dark d-block">The future of ETH</a>
+                                <small class="gradient-text d-block">0.75ETH</small>
+
+                                <ul class="pt-3 mt-2 border-top d-flex justify-content-between align-items-center list-unstyled">
+                                    <li class="d-flex author align-items-center">
+                                        <div class="position-relative">
+                                            <img src="images/client/01.jpg" class="avatar avatar-sm-sm rounded-pill shadow" alt="">
+                                            <div class="position-absolute top-0 start-0 translate-middle pt-2 ps-2">
+                                                <i class="mdi mdi-check-circle mdi-18px text-success"></i>
+                                            </div>
+                                        </div>
+                                        <a href="nft-creator-profile.html" class="ps-2 text-dark name">Jordan</a>
+                                    </li>
+
+                                    <li>
+                                        <span>23 <a href="javascrpit:void(0)" class="like"><i class="mdi mdi-heart align-middle"></i></a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+
+                    <div class="col picture-item mt-4 pt-2" data-groups='["free"]'>
+                        <div class="nft-items nft-item-primary">
+                            <div class="nft-image position-relative overflow-hidden rounded-md shadow-md">
+                                <img src="images/nft/500/10.jpg" class="img-fluid" alt="">
+                                <div class="pop-icon">
+                                    <a href="nft-item-detail.html" class="btn bg-white btn-pills btn-icon shadow"><i class="uil uil-arrow-right text-dark"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="content pt-3">
+                                <a href="nft-item-detail.html" class="title h6 mb-1 text-dark d-block">The future of ETH</a>
+                                <small class="gradient-text d-block">0.75ETH</small>
+
+                                <ul class="pt-3 mt-2 border-top d-flex justify-content-between align-items-center list-unstyled">
+                                    <li class="d-flex author align-items-center">
+                                        <div class="position-relative">
+                                            <img src="images/client/05.jpg" class="avatar avatar-sm-sm rounded-pill shadow" alt="">
+                                            <div class="position-absolute top-0 start-0 translate-middle pt-2 ps-2">
+                                                <i class="mdi mdi-check-circle mdi-18px text-success"></i>
+                                            </div>
+                                        </div>
+                                        <a href="nft-creator-profile.html" class="ps-2 text-dark name">Lilia</a>
+                                    </li>
+
+                                    <li>
+                                        <span>23 <a href="javascrpit:void(0)" class="like"><i class="mdi mdi-heart align-middle"></i></a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+
+                <div class="row justify-content-center">
+                    <div class="col-12 d-md-none d-block text-center mt-4 pt-2">
+                        <a href="nft-explore.html" class="btn btn-primary">See More Items <i class="uil uil-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div><!--end container-->
+
+            <div class="container mt-100 mt-60">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <div class="section-title">
+                            <h4 class="title mb-0">Popular Creators</h4>
+                        </div>
+                    </div><!--end col-->
+
+                    <div class="col-md-4 text-end d-none d-md-block">
+                        <a href="nft-cretors.html" class="btn btn-primary">See More <i class="uil uil-arrow-right"></i></a>
+                    </div>
+                </div><!--end row-->
+
+                <div class="row">
+                    <div class="col-12 mt-4 pt-2">
+                        <div class="tiny-five-item">
+                            <div class="tiny-slide">
+                                <div class="card nft-creator nft-creator-primary border-0 rounded-md shadow m-2">
+                                    <div class="card-body p-3">
+                                        <div class="pb-3 border-bottom">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="badge bg-soft rounded-pill">No. #1</span>
+        
+                                                <a href="nft-collection.html" class="text-dark h5 mb-0 read-more"><i class="uil uil-arrow-circle-right"></i></a>
+                                            </div>
+                                        </div>
+        
+                                        <div class="content mt-3">
+                                            <div class="position-relative text-center">
+                                                <img src="images/client/01.jpg" class="avatar avatar-small rounded-pill shadow" alt="">
+                                                
+                                                <div class="author mt-2">
+                                                    <a href="nft-creator-profile.html" class="text-dark h6 name">Jordan Joo</a>
+                                                    <small class="d-block fw-medium mt-1">0.75<span class="text-muted">ETH</span></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end tiny-slide-->
+                            
+                            <div class="tiny-slide">
+                                <div class="card nft-creator nft-creator-success border-0 rounded-md shadow m-2">
+                                    <div class="card-body p-3">
+                                        <div class="pb-3 border-bottom">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="badge bg-soft rounded-pill">No. #2</span>
+        
+                                                <a href="nft-collection.html" class="text-dark h5 mb-0 read-more"><i class="uil uil-arrow-circle-right"></i></a>
+                                            </div>
+                                        </div>
+        
+                                        <div class="content mt-3">
+                                            <div class="position-relative text-center">
+                                                <img src="images/client/02.jpg" class="avatar avatar-small rounded-pill shadow" alt="">
+                                                
+                                                <div class="author mt-2">
+                                                    <a href="nft-creator-profile.html" class="text-dark h6 name">Sofia Malik</a>
+                                                    <small class="d-block fw-medium mt-1">0.75<span class="text-muted">ETH</span></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end tiny-slide-->
+                            
+                            <div class="tiny-slide">
+                                <div class="card nft-creator nft-creator-warning border-0 rounded-md shadow m-2">
+                                    <div class="card-body p-3">
+                                        <div class="pb-3 border-bottom">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="badge bg-soft rounded-pill">No. #3</span>
+        
+                                                <a href="nft-collection.html" class="text-dark h5 mb-0 read-more"><i class="uil uil-arrow-circle-right"></i></a>
+                                            </div>
+                                        </div>
+        
+                                        <div class="content mt-3">
+                                            <div class="position-relative text-center">
+                                                <img src="images/client/03.jpg" class="avatar avatar-small rounded-pill shadow" alt="">
+                                                
+                                                <div class="author mt-2">
+                                                    <a href="nft-creator-profile.html" class="text-dark h6 name">Cristina Murphy</a>
+                                                    <small class="d-block fw-medium mt-1">0.75<span class="text-muted">ETH</span></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end tiny-slide-->
+                            
+                            <div class="tiny-slide">
+                                <div class="card nft-creator nft-creator-danger border-0 rounded-md shadow m-2">
+                                    <div class="card-body p-3">
+                                        <div class="pb-3 border-bottom">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="badge bg-soft rounded-pill">No. #4</span>
+        
+                                                <a href="nft-collection.html" class="text-dark h5 mb-0 read-more"><i class="uil uil-arrow-circle-right"></i></a>
+                                            </div>
+                                        </div>
+        
+                                        <div class="content mt-3">
+                                            <div class="position-relative text-center">
+                                                <img src="images/client/04.jpg" class="avatar avatar-small rounded-pill shadow" alt="">
+                                                
+                                                <div class="author mt-2">
+                                                    <a href="nft-creator-profile.html" class="text-dark h6 name">Jack Lili</a>
+                                                    <small class="d-block fw-medium mt-1">0.75<span class="text-muted">ETH</span></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end tiny-slide-->
+                            
+                            <div class="tiny-slide">
+                                <div class="card nft-creator nft-creator-info border-0 rounded-md shadow m-2">
+                                    <div class="card-body p-3">
+                                        <div class="pb-3 border-bottom">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="badge bg-soft rounded-pill">No. #5</span>
+        
+                                                <a href="nft-collection.html" class="text-dark h5 mb-0 read-more"><i class="uil uil-arrow-circle-right"></i></a>
+                                            </div>
+                                        </div>
+        
+                                        <div class="content mt-3">
+                                            <div class="position-relative text-center">
+                                                <img src="images/client/05.jpg" class="avatar avatar-small rounded-pill shadow" alt="">
+                                                
+                                                <div class="author mt-2">
+                                                    <a href="nft-creator-profile.html" class="text-dark h6 name">Lilia Moris</a>
+                                                    <small class="d-block fw-medium mt-1">0.75<span class="text-muted">ETH</span></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end tiny-slide-->
+                            
+                            <div class="tiny-slide">
+                                <div class="card nft-creator nft-creator-primary border-0 rounded-md shadow m-2">
+                                    <div class="card-body p-3">
+                                        <div class="pb-3 border-bottom">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="badge bg-soft rounded-pill">No. #6</span>
+        
+                                                <a href="nft-collection.html" class="text-dark h5 mb-0 read-more"><i class="uil uil-arrow-circle-right"></i></a>
+                                            </div>
+                                        </div>
+        
+                                        <div class="content mt-3">
+                                            <div class="position-relative text-center">
+                                                <img src="images/client/06.jpg" class="avatar avatar-small rounded-pill shadow" alt="">
+                                                
+                                                <div class="author mt-2">
+                                                    <a href="nft-creator-profile.html" class="text-dark h6 name">Anderson</a>
+                                                    <small class="d-block fw-medium mt-1">0.75<span class="text-muted">ETH</span></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end tiny-slide-->
+                            
+                            <div class="tiny-slide">
+                                <div class="card nft-creator nft-creator-success border-0 rounded-md shadow m-2">
+                                    <div class="card-body p-3">
+                                        <div class="pb-3 border-bottom">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="badge bg-soft rounded-pill">No. #7</span>
+        
+                                                <a href="nft-collection.html" class="text-dark h5 mb-0 read-more"><i class="uil uil-arrow-circle-right"></i></a>
+                                            </div>
+                                        </div>
+        
+                                        <div class="content mt-3">
+                                            <div class="position-relative text-center">
+                                                <img src="images/client/07.jpg" class="avatar avatar-small rounded-pill shadow" alt="">
+                                                
+                                                <div class="author mt-2">
+                                                    <a href="nft-creator-profile.html" class="text-dark h6 name">Joe Moris</a>
+                                                    <small class="d-block fw-medium mt-1">0.75<span class="text-muted">ETH</span></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end tiny-slide-->
+                            
+                            <div class="tiny-slide">
+                                <div class="card nft-creator nft-creator-warning border-0 rounded-md shadow m-2">
+                                    <div class="card-body p-3">
+                                        <div class="pb-3 border-bottom">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="badge bg-soft rounded-pill">No. #8</span>
+        
+                                                <a href="nft-collection.html" class="text-dark h5 mb-0 read-more"><i class="uil uil-arrow-circle-right"></i></a>
+                                            </div>
+                                        </div>
+        
+                                        <div class="content mt-3">
+                                            <div class="position-relative text-center">
+                                                <img src="images/client/08.jpg" class="avatar avatar-small rounded-pill shadow" alt="">
+                                                
+                                                <div class="author mt-2">
+                                                    <a href="nft-creator-profile.html" class="text-dark h6 name">John Carter</a>
+                                                    <small class="d-block fw-medium mt-1">0.75<span class="text-muted">ETH</span></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end tiny-slide-->
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+
+                <div class="row justify-content-center">
+                    <div class="col-12 d-md-none d-block text-center mt-4 pt-2">
+                        <a href="nft-cretors.html" class="btn btn-primary">See More <i class="uil uil-arrow-right"></i></a>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- End -->
+
+        <!-- Start -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="section-title text-center mb-4 pb-2">
+                            <h4 class="title mb-3">Top Collections</h4>
+                            <p class="text-muted para-desc mx-auto mb-0">Buy and sell 100+ cryptocurrencies with 20+ fiat currencies using bank transfers or your credit/debit card.</p>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                        <div class="nft-collection nft-col-primary p-3 bg-white rounded-md shadow">
+                            <img src="images/nft/800/1.jpg" class="img-fluid rounded-md shadow mb-2" alt="">
+
+                            <div class="row g-2">
+                                <div class="col-4">
+                                    <img src="images/nft/800/2.jpg" class="img-fluid rounded-md shadow" alt="">
+                                </div>
+                                <div class="col-4">
+                                    <img src="images/nft/800/3.jpg" class="img-fluid rounded-md shadow" alt="">
+                                </div>
+                                <div class="col-4">
+                                    <img src="images/nft/800/4.jpg" class="img-fluid rounded-md shadow" alt="">
+                                </div>
+                            </div>
+
+                            <div class="content mt-3">
+                                <a href="nft-collection.html" class="title text-dark h5">Collection #1</a>
+
+                                <ul class="pt-3 d-flex justify-content-between align-items-center list-unstyled mb-0">
+                                    <li class="d-flex author align-items-center">
+                                        <img src="images/client/01.jpg" class="avatar avatar-sm-sm rounded-pill shadow" alt="">
+                                        <span class="text-muted ps-2">by</span>
+                                        <a href="nft-creator-profile.html" class="ps-1 text-dark h6 mb-0 name">Jordan</a>
+                                    </li>
+
+                                    <li>
+                                        <span class="badge bg-soft">25 Items</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                        <div class="nft-collection nft-col-primary p-3 bg-white rounded-md shadow">
+                            <img src="images/nft/800/5.jpg" class="img-fluid rounded-md shadow mb-2" alt="">
+
+                            <div class="row g-2">
+                                <div class="col-4">
+                                    <img src="images/nft/800/6.jpg" class="img-fluid rounded-md shadow" alt="">
+                                </div>
+                                <div class="col-4">
+                                    <img src="images/nft/800/7.jpg" class="img-fluid rounded-md shadow" alt="">
+                                </div>
+                                <div class="col-4">
+                                    <img src="images/nft/800/8.jpg" class="img-fluid rounded-md shadow" alt="">
+                                </div>
+                            </div>
+
+                            <div class="content mt-3">
+                                <a href="nft-collection.html" class="title text-dark h5">Collection #2</a>
+
+                                <ul class="pt-3 d-flex justify-content-between align-items-center list-unstyled mb-0">
+                                    <li class="d-flex author align-items-center">
+                                        <img src="images/client/05.jpg" class="avatar avatar-sm-sm rounded-pill shadow" alt="">
+                                        <span class="text-muted ps-2">by</span>
+                                        <a href="nft-creator-profile.html" class="ps-1 text-dark h6 mb-0 name">Lilia</a>
+                                    </li>
+
+                                    <li>
+                                        <span class="badge bg-soft">25 Items</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                        <div class="nft-collection nft-col-primary p-3 bg-white rounded-md shadow">
+                            <img src="images/nft/800/9.jpg" class="img-fluid rounded-md shadow mb-2" alt="">
+
+                            <div class="row g-2">
+                                <div class="col-4">
+                                    <img src="images/nft/800/10.jpg" class="img-fluid rounded-md shadow" alt="">
+                                </div>
+                                <div class="col-4">
+                                    <img src="images/nft/800/11.jpg" class="img-fluid rounded-md shadow" alt="">
+                                </div>
+                                <div class="col-4">
+                                    <img src="images/nft/800/12.jpg" class="img-fluid rounded-md shadow" alt="">
+                                </div>
+                            </div>
+
+                            <div class="content mt-3">
+                                <a href="nft-collection.html" class="title text-dark h5">Collection #3</a>
+
+                                <ul class="pt-3 d-flex justify-content-between align-items-center list-unstyled mb-0">
+                                    <li class="d-flex author align-items-center">
+                                        <img src="images/client/08.jpg" class="avatar avatar-sm-sm rounded-pill shadow" alt="">
+                                        <span class="text-muted ps-2">by</span>
+                                        <a href="nft-creator-profile.html" class="ps-1 text-dark h6 mb-0 name">John</a>
+                                    </li>
+
+                                    <li>
+                                        <span class="badge bg-soft">25 Items</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end contanier-->
+        </section><!--end section-->
+        <!-- End -->
+
+        <!-- Footer Start -->
+        <footer class="bg-footer">    
+            <div class="footer-py-30 footer-bar bg-footer">
+                <div class="container text-center">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-lg-3 col-md-2 col-sm-3">
+                            <div class="text-sm-start">
+                                <a href="#" class="logo-footer">
+                                    <img src="images/logo-light.png" height="28" alt="">
+                                </a>
+                            </div>
+                        </div><!--end col-->
+    
+                        <div class="col-lg-6 col-md-6 col-sm-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                            <ul class="list-unstyled footer-list terms-service mb-0">
+                                <li class="list-inline-item mb-0"><a href="nft-explore.html" class="text-foot me-2">Explore</a></li>
+                                <li class="list-inline-item mb-0"><a href="nft-faqs.html" class="text-foot me-2">FAQs</a></li>
+                                <li class="list-inline-item mb-0"><a href="#" class="text-foot me-2">Terms</a></li>
+                                <li class="list-inline-item mb-0"><a href="#" class="text-foot">Privacy</a></li>
+                            </ul>
+                        </div><!--end col-->
+
+                        <div class="col-lg-3 col-md-4 col-sm-3 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                            <div class="text-sm-end">
+                                <p class="mb-0 text-foot">© <script>document.write(new Date().getFullYear())</script> <a href="http://www.shreethemes.in/" target="_blank" class="text-reset">Shreethemes</a>.</p>
+                            </div>
+                        </div><!--end col-->
+                    </div><!--end row-->
+                </div><!--end container-->
+            </div>
+        </footer><!--end footer-->
+        <!-- Footer End -->
+
+        <!-- Offcanvas Start -->
+        <div class="offcanvas bg-white offcanvas-top" tabindex="-1" id="offcanvasTop">
+            <div class="offcanvas-body d-flex align-items-center align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="text-center">
+                                <h4>Search now.....</h4>
+                                <div class="subcribe-form mt-4">
+                                    <form>
+                                        <div class="mb-0">
+                                            <input type="text" id="help" name="name" class="border bg-white rounded-pill" required="" placeholder="Search anything...">
+                                            <button type="submit" class="btn btn-pills btn-primary">Search</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div><!--end col-->
+                    </div><!--end row-->
+                </div><!--end container-->
+            </div>
+        </div>
+        <!-- Offcanvas End -->
+        
+        
+        
+        <!-- Style switcher -->
+        <div id="style-switcher" class="bg-light border p-3 pt-2 pb-2" onclick="toggleSwitcher()">
+            <div>
+                <h6 class="title text-center">Select Your Color</h6>
+                <ul class="pattern">
+                    <li class="list-inline-item">
+                        <a class="color1" href="javascript:void(0);" onclick="setColor('default')"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="color2" href="javascript:void(0);" onclick="setColor('green')"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="color3" href="javascript:void(0);" onclick="setColor('purple')"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="color4" href="javascript:void(0);" onclick="setColor('red')"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="color5" href="javascript:void(0);" onclick="setColor('skobleoff')"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="color6" href="javascript:void(0);" onclick="setColor('yellow')"></a>
+                    </li>
+                </ul>
+
+                <h6 class="title text-center pt-3 mb-0 border-top">Theme Option</h6>
+                <ul class="text-center list-unstyled mb-0">
+                    <!-- <li class="d-grid"><a href="javascript:void(0)" class="btn btn-sm btn-block btn-primary rtl-version t-rtl-light mt-2" onclick="setTheme('style-rtl')">RTL</a></li>
+                    <li class="d-grid"><a href="javascript:void(0)" class="btn btn-sm btn-block btn-primary ltr-version t-ltr-light mt-2" onclick="setTheme('style')">LTR</a></li>
+                    <li class="d-grid"><a href="javascript:void(0)" class="btn btn-sm btn-block btn-primary dark-rtl-version t-rtl-dark mt-2" onclick="setTheme('style-dark-rtl')">RTL</a></li>
+                    <li class="d-grid"><a href="javascript:void(0)" class="btn btn-sm btn-block btn-primary dark-ltr-version t-ltr-dark mt-2" onclick="setTheme('style-dark')">LTR</a></li> -->
+                    <li class="d-grid"><a href="javascript:void(0)" class="btn btn-sm btn-block btn-dark dark-version t-dark mt-2" onclick="setTheme('style-dark')">Dark</a></li>
+                    <li class="d-grid"><a href="javascript:void(0)" class="btn btn-sm btn-block btn-dark light-version t-light mt-2" onclick="setTheme('style')">Light</a></li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <a href="javascript:void(0);" class="settings bg-white shadow d-block"><i class="mdi mdi-cog ms-1 mdi-24px position-absolute mdi-spin text-primary"></i></a>
+            </div>
+        </div>
+        <!-- end Style switcher -->
+        
+        
+        <!-- javascript -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/tiny-slider.js "></script>
+        <script src="js/shuffle.min.js"></script>
+        <script src="js/feather.min.js"></script>
+        
+        <!-- Main Js -->
+        <script src="js/plugins.init.js"></script>
+        <script src="js/app.js"></script>
+        
+    </body>
+
+</html>

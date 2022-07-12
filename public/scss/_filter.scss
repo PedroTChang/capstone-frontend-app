@@ -1,0 +1,193 @@
+//
+// _blog.scss
+//
+
+/*********************************/
+/*         Filter                */
+/*===============================*/
+// Filter
+.container-filter {
+    li {
+        margin: 0px 15px 10px !important;
+        font-size: 14px;
+        letter-spacing: 0.8px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        color: $muted !important;
+        border-bottom: 1px solid transparent;
+        font-weight: 500;
+        &.active,
+        &:hover {
+            color: $dark !important;
+            border-bottom-color: $dark;
+        }
+    }
+}
+
+//NFT Items
+.nft-items {
+    @each $name,
+    $value in $colors {
+        &.nft-item-#{$name} {
+            .content {
+                .title {
+                    transition: all 0.5s ease;
+                    &:hover {
+                        color: $value !important;
+                    }
+                }
+                .author {
+                    .name {
+                        &:hover {
+                            color: $value !important;
+                        }
+                    }
+                }
+            }
+
+            .bg-color {
+                background-color: #{$value} !important;
+            }
+        }
+    }
+}
+
+.nft-items {
+    .nft-image {
+        transition: all 0.5s ease;
+        > img {
+            transition: all 0.5s ease;
+        }
+        .pop-icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            right: 0;
+            text-align: center;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+        .like {
+            height: 30px;
+            width: 30px;
+            background: $white;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            -webkit-text-stroke: 1px $muted;
+            -webkit-text-fill-color: transparent;
+            &:hover, 
+            &:focus {
+                -webkit-text-stroke: $danger;
+                -webkit-text-fill-color: $danger;
+            }
+        }
+    }
+    &:hover {
+        .nft-image {
+            > img {
+                transform: scale(1.1);
+            }
+            .pop-icon {
+                opacity: 1;
+            }
+        }
+    }
+
+    .content {
+        .title {
+            transition: all 0.5s ease;
+        }
+        
+        .like {
+            -webkit-text-stroke: 1px $muted;
+            -webkit-text-fill-color: transparent;
+            &:hover, 
+            &:focus {
+                -webkit-text-stroke: $danger;
+                -webkit-text-fill-color: $danger;
+            }
+        }
+    }
+}
+
+//Creators
+.nft-creator {
+    @each $name,
+    $value in $colors {
+        &.nft-creator-#{$name} {
+            .content {
+                .author {
+                    .name { 
+                        &:hover {
+                            color: $value !important;
+                        }
+                    }
+                }
+            }
+            .btn {
+                background-color: #{$value} !important;
+                border: 1px solid #{$value} !important;
+                color: $white !important;
+                box-shadow: 0 3px 5px 0 rgba($value, 0.3);
+                &:hover, &:focus, &:active, &.active, &.focus{
+                    background-color: darken($value, 10%) !important;
+                    border-color: darken($value, 10%) !important;
+                    color: $white !important;
+                }
+            }
+            .bg-soft {
+                background-color: rgba($value, 0.1) !important;
+                border: 1px solid rgba($value, 0.1) !important;
+                color: #{$value} !important;
+            }
+            .read-more {
+                &:hover {
+                    color: $value !important;
+                }
+            }
+        }
+    }
+}
+
+.nft-creator {
+    transition: all 0.5s ease;
+    .content {
+        img {
+            transition: all 0.5s ease;
+        }
+    }
+    &:hover {
+        .content {
+            img {
+                height: 90px !important;
+                width: 90px !important;
+            }
+        }
+    }
+}
+
+//Collections
+.nft-collection {
+    @each $name,
+    $value in $colors {
+        &.nft-col-#{$name} {
+            .content {
+                .author .name,
+                .title { 
+                    &:hover {
+                        color: $value !important;
+                    }
+                }
+
+                .bg-soft {
+                    background-color: rgba($value, 0.1) !important;
+                    border: 1px solid rgba($value, 0.1) !important;
+                    color: #{$value} !important;
+                }
+            }
+        }
+    }
+}

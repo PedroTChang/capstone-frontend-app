@@ -1,0 +1,102 @@
+//
+// features.scss
+//
+
+/*********************************/
+/*         Features & Services   */
+/*===============================*/
+.feature {
+    @each $name,
+    $value in $colors {
+        &.feature-#{$name} {
+            .icons {
+                i {
+                    background: linear-gradient(45deg, transparent, rgba($value, 0.2));
+                    color: $value;
+                }
+            }
+            .title {
+                &:hover {
+                    color: $value !important;
+                }
+            }
+            .link {
+                color: $value !important;
+            }
+            .btn-color {
+                background-color: #{$value} !important;
+                border: 1px solid #{$value} !important;
+                color: $white !important;
+                box-shadow: 0 3px 5px 0 rgba($value, 0.3);
+                &:hover, &:focus, &:active, &.active, &.focus{
+                    background-color: darken($value, 10%) !important;
+                    border-color: darken($value, 10%) !important;
+                    color: $white !important;
+                }
+            }
+        
+            .btn-soft {
+                background-color: rgba($value, 0.1) !important;
+                border: 1px solid rgba($value, 0.1) !important;
+                color: #{$value} !important;
+                box-shadow: 0 3px 5px 0 rgba($value, 0.3);
+                &:hover, &:focus, &:active, &.active, &.focus{
+                    background-color: #{$value} !important;
+                    border-color: #{$value} !important;
+                    color: $white !important;
+                }
+            }
+        }
+    }
+}
+
+.feature {
+    &.feature-clean {
+        .icons {
+            i {
+                height: 65px;
+                width: 65px;
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+
+//Key Features
+.key-feature {
+    @each $name,
+    $value in $colors {
+        &.feature-#{$name} {
+            .icon {
+                color: $value !important;
+                background: linear-gradient(45deg, transparent, rgba($value, 0.2));
+            }
+        }
+    }
+}
+
+.key-feature {
+    transition: all 0.5s ease;
+    .icon {
+        height: 45px;
+        width: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+//features-absolute
+.features-absolute {
+    position: relative;
+    z-index: 2;
+    transition: all 0.5s ease;
+    margin: -180px 0 0px;
+
+    @media (max-width: 768px) {
+        margin: -140px 0 0;
+    }
+}

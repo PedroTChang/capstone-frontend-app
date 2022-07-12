@@ -1,0 +1,59 @@
+//
+// _price-chart.scss
+//
+
+/*********************************/
+/*          price chart          */
+/*===============================*/
+
+.crypto-chart {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.calculator-block {
+    background-color: $white;
+    .cryptonatorwidget {
+        border: none !important;
+        padding: 0 !important;
+        background: $light !important;
+        input,
+        select {
+            height: 40px !important;
+            line-height: 40px !important;
+            margin-bottom: 0;
+            border: none;
+            background-color: $light !important;
+            border: none;
+            outline: none;
+            box-shadow: $shadow;
+            padding: 12px;
+            border-radius: 6px;
+            background-color: transparent;
+            color: $muted;
+        }
+        div:last-child{
+            display: none;
+        }
+    }
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $muted;
+        text-transform: capitalize;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+        color: $muted;
+        text-transform: capitalize;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+        color: $muted;
+        text-transform: capitalize;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+        color: $muted;
+        text-transform: capitalize;
+    }
+}

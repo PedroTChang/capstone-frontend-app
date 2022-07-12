@@ -1,0 +1,78 @@
+//
+// variables.scss
+//
+
+/*********************************/
+/*     Variables-DARK            */
+/*===============================*/
+
+// Color
+$white:                     #0B1118; 
+
+$secondary:                 #5a6d90;
+$dark:                      #ffffff; 
+$black:                     #161c2d;
+$muted:                     #9bacc4; 
+$light:                     #151c2b;
+
+// Gray
+$gray-100:                  #495057;
+$gray-200:                  #6c757d;
+$gray-300:                  #adb5bd;
+$gray-400:                  #ced4da;
+$gray-500:                  #dee2e6;
+$gray-600:                  #e9ecef;
+$gray-700:                  #f8f9fa;
+
+// Overlay
+$overlay:                   rgba($white, 0.7);
+$gradident-overlay:         rgba($primary, 0.5);
+$bg-overlay-white:          rgba(0, 0, 0 , 0.4);
+
+//Body Background
+$shadow:                    0 0 3px rgba($dark,.15);
+$shadow-lg:                 0 10px 25px rgba($dark, 0.15);
+$shadow-md:                 0 5px 13px rgba($dark, .2);
+$footer:                    lighten($white, 3%);
+$bg-body:                   $white;
+
+// Base font
+$font-size-base:            16px;
+
+//Color Picker/Switcher
+$default:                   #6666ff;
+$green:                     #00d88a;
+$red:                       #f15131;
+$purple:                    #7952B3;
+$skobleoff:                 #0f7173;
+$yellow:                    #fcd535;
+
+$colors: (
+    "white": $white,
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "warning": $warning,
+    "info": $info,
+    "danger": $danger,
+    "dark": $dark,
+    "muted": $muted,
+    "light": $light,
+    "footer": $footer,
+);
+
+$heading-font-sizes: (
+    "h1": 42px,
+    "h2": 36px,
+    "h3": 30px,
+    "h4": 24px,
+    "h5": 18px,
+    "h6": 16px,
+);
+
+$display-font-sizes: (
+    "display-1": 80px,
+    "display-2": 72px,
+    "display-3": 64px,
+    "display-4": 56px,
+)

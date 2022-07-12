@@ -1,0 +1,89 @@
+//
+// variables.scss
+//
+
+/*********************************/
+/*         Variables             */
+/*===============================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Poppins:wght@400;500;600;700&display=swap');
+
+// Color
+$white:                     #ffffff;
+
+$primary:                   #6666ff; //2f55d4
+$secondary:                 #5a6d90;
+$success:                   #52cc99;
+$warning:                   #ffbf66;
+$info:                      #66ccff;
+$danger:                    #ff6647;
+$dark:                      #3e454e;
+$black:                     #161c2d;
+$muted:                     #8492a6;
+$light:                     #f8f9fc;
+
+//Color Picker/Switcher
+$default:                   #6666ff;
+$green:                     #00d88a;
+$red:                       #f15131;
+$purple:                    #7952B3;
+$skobleoff:                 #0f7173;
+$yellow:                    #fcd535;
+
+// Gray
+$gray-100:                  #f8f9fa;
+$gray-200:                  #e9ecef;
+$gray-300:                  #dee2e6;
+$gray-400:                  #ced4da;
+$gray-500:                  #adb5bd;
+$gray-600:                  #6c757d; 
+$gray-700:                  #495057;
+
+// Overlay
+$overlay:                   rgba($dark, 0.7);
+$bg-overlay-white:          rgba($white, 0.5);
+$bg-gradient-primary:       linear-gradient(to left, darken($purple, 15%) 0%, darken($primary, 5%) 100%);
+
+//Body Background
+$shadow:                    0 0 3px rgba($dark,.15);
+$shadow-md:                 0 5px 13px rgba($dark, .2);
+$shadow-lg:                 0 10px 25px rgba($dark, 0.15);
+$footer:                    lighten($black, 6%);
+
+// Base font
+$font-size-base:            15px;
+
+$font-family-base:          'Poppins', sans-serif;
+$font-family-secondary:     'Poppins', sans-serif;
+
+
+$colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "warning": $warning,
+    "info": $info,
+    "danger": $danger,
+    "dark": $dark,
+    "muted": $muted,
+    "light": $light,
+    "footer": $footer
+);
+
+$heading-font-sizes: (
+    "h1": 42px,
+    "h2": 36px,
+    "h3": 30px,
+    "h4": 24px,
+    "h5": 18px,
+    "h6": 15px,
+);
+
+$display-font-sizes: (
+    "display-1": 80px,
+    "display-2": 72px,
+    "display-3": 64px,
+    "display-4": 56px,
+    "display-5": 48px,
+    "display-6": 40px,
+)
