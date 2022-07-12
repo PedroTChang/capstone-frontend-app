@@ -133,16 +133,21 @@ export default {
                 <tbody v-for="tracker in trackers" v-bind:key="tracker.id">
                   <tr>
                     <th class="py-3">
-                      <a href="#!" class="align-items-center">
+                      <a class="align-items-center">
                         <!-- <img
                           src="images/coin/bitcoin.png"
                           class="me-3"
                           height="32"
                           alt=""
                         /> -->
-                        <p class="mb-0 d-inline text-dark fw-normal h6">
-                          {{ tracker.name }} <span class="text-muted"></span>
-                        </p>
+                        <div>
+                          <router-link
+                            class="mb-0 d-inline text-dark fw-normal h6"
+                            v-bind:to="`/media/${tracker.medium_id}`"
+                          >
+                            {{ tracker.name }} <span class="text-muted"></span>
+                          </router-link>
+                        </div>
                       </a>
                     </th>
                     <td class="text-center">
@@ -306,19 +311,27 @@ export default {
                 <tbody v-for="medium in media" v-bind:key="medium.id">
                   <tr>
                     <th class="py-3">
-                      <a
-                        v-bind:href="/media/ + medium.id"
-                        class="align-items-center"
-                      >
+                      <a class="align-items-center">
                         <!-- <img
                           src="images/coin/bitcoin.png"
                           class="me-3"
                           height="32"
                           alt=""
                         /> -->
-                        <p class="mb-0 d-inline text-dark fw-normal h6">
-                          {{ medium.name }} <span class="text-muted"></span>
-                        </p>
+                        <!-- <a
+                          class="mb-0 d-inline text-dark fw-normal h6"
+                          v-bind:href="`/media/${medium.id}`"
+                        >
+                          {{ medium.name }}
+                          <span class="text-muted"></span>
+                        </a> -->
+                        <div>
+                          <router-link
+                            class="mb-0 d-inline text-dark fw-normal h6"
+                            v-bind:to="`/media/${medium.id}`"
+                            >{{ medium.name }}</router-link
+                          >
+                        </div>
                       </a>
                     </th>
                     <td class="text-center">
@@ -433,44 +446,6 @@ export default {
     </section>
     <!--end section-->
     <!-- End -->
-    <h1>Trackers</h1>
-    <div v-for="tracker in trackers" v-bind:key="tracker.id">
-      <h2>{{ tracker.name }}</h2>
-      <h3>Latest: {{ tracker.latest }}</h3>
-      <h3>Type: {{ tracker.media_type }}</h3>
-      <h3>Status: {{ tracker.status }}</h3>
-      <div v-if="!tracker.isEdit">
-        <h3>Progress: {{ tracker.progress }}</h3>
-        <h3>Current: {{ tracker.current }}</h3>
-        <button v-on:click="show(tracker)">Tracker</button>
-      </div>
-      <div v-if="tracker.isEdit">
-        Current:
-        <input type="text" v-model="tracker.current" />
-        Progress:
-        <input type="text" v-model="tracker.progress" />
-        <button v-on:click="updateTracker(tracker)">Edit Tracker</button>
-      </div>
-    </div>
-    <div>
-      <h1>Media</h1>
-      <div v-for="medium in media" v-bind:key="medium.id">
-        <h2>{{ medium.name }}</h2>
-        <h3>Latest: {{ medium.latest }}</h3>
-        <h3>{{ medium.status }}</h3>
-        <button>
-          <router-link v-bind:to="`/media/${medium.id}`">More Info</router-link>
-        </button>
-        <div v-if="!medium.isEdit">
-          <button v-on:click="show(medium)">Create</button>
-        </div>
-        <div v-if="medium.isEdit">
-          Current:
-          <input type="text" v-model="medium.current" />
-          <button v-on:click="createTracker(medium)">Create Tracker</button>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
