@@ -32,11 +32,12 @@
         <div class="menu-extras">
           <div class="menu-item">
             <!-- Mobile menu toggle-->
-            <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+            <a class="navbar-toggle" id="isToggle" v-on:click="toggleMenu()">
               <div class="lines">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span>Tracker</span>
+                <span>Login</span>
+                <span>Signup</span>
+                <span>Logout</span>
               </div>
             </a>
             <!-- End mobile menu toggle-->

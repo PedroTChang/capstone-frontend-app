@@ -146,9 +146,26 @@ export default {
                       </a>
                     </th>
                     <td class="text-center">
-                      <span class="badge rounded-md bg-soft-success">{{
-                        tracker.progress
-                      }}</span>
+                      <div v-if="tracker.progress == 'Watching'">
+                        <span class="badge rounded-md bg-soft-success">{{
+                          tracker.progress
+                        }}</span>
+                      </div>
+                      <div v-if="tracker.progress == 'Reading'">
+                        <span class="badge rounded-md bg-soft-success">{{
+                          tracker.progress
+                        }}</span>
+                      </div>
+                      <div v-if="tracker.progress == 'Dropped'">
+                        <span class="badge rounded-md bg-soft-danger">{{
+                          tracker.progress
+                        }}</span>
+                      </div>
+                      <div v-if="tracker.progress == 'Completed'">
+                        <span class="badge rounded-md bg-soft-info">{{
+                          tracker.progress
+                        }}</span>
+                      </div>
                     </td>
                     <td class="text-center">
                       <ul class="list-unstyled text-warning mb-0">
@@ -289,7 +306,10 @@ export default {
                 <tbody v-for="medium in media" v-bind:key="medium.id">
                   <tr>
                     <th class="py-3">
-                      <a href="#!" class="align-items-center">
+                      <a
+                        v-bind:href="/media/ + medium.id"
+                        class="align-items-center"
+                      >
                         <!-- <img
                           src="images/coin/bitcoin.png"
                           class="me-3"

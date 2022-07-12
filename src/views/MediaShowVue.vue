@@ -17,7 +17,6 @@ export default {
   methods: {},
 };
 </script>
-
 <template>
   <div class="media-show">
     <h1>{{ medium.name }}</h1>
