@@ -11,7 +11,7 @@ const routes = [
   // { path: "/", name: "home", component: HomeView },
   // { path: "/trackers", name: "trackers-index", component: MediaIndex },
   { path: "/", name: "media-index", component: MediaIndex },
-  { path: "/:id", name: "media-show", component: MediaShow },
+  { path: "/media/:id", name: "media-show", component: MediaShow },
   { path: "/signup", name: "signup", component: SignupView },
   { path: "/login", name: "login", component: LoginView },
   { path: "/logout", name: "logout", component: LogoutView },
