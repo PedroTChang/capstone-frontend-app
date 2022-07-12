@@ -111,21 +111,28 @@ export default {
                       class="fw-normal text-center text-muted py-4"
                       style="width: 200px; min-width: 150px"
                     >
-                      Latest
+                      Type
                     </th>
                     <th
                       scope="col"
                       class="fw-normal text-center text-muted py-4"
                       style="width: 250px; min-width: 150px"
                     >
+                      Latest
+                    </th>
+                    <th
+                      scope="col"
+                      class="fw-normal text-left text-muted py-4"
+                      style="width: 150px; min-width: 150px"
+                    >
                       Current
                     </th>
                     <th
                       scope="col"
-                      class="fw-normal text-end text-muted py-4"
-                      style="width: 150px; min-width: 150px"
+                      class="fw-normal text-right text-muted py-4"
+                      style="width: 25px; min-width: 25px"
                     >
-                      Type
+                      Update
                     </th>
                   </tr>
                 </thead>
@@ -172,6 +179,9 @@ export default {
                         }}</span>
                       </div>
                     </td>
+                    <td class="text-center text-muted">
+                      {{ tracker.media_type }}
+                    </td>
                     <td class="text-center">
                       <ul class="list-unstyled text-warning mb-0">
                         <li class="list-inline-item mb-0 text-muted small">
@@ -180,27 +190,36 @@ export default {
                       </ul>
                     </td>
                     <td class="text-center">
-                      <small class="title text-muted mb-0"
-                        ><div v-if="!tracker.isEdit">
+                      <ul class="list-unstyled text-warning mb-0">
+                        <li class="list-inline-item mb-0 text-muted small">
                           {{ tracker.current }}
-                          <button v-on:click="show(tracker)">Edit</button>
-                        </div>
-                        <div v-if="tracker.isEdit">
-                          Current:
-                          <input type="text" v-model="tracker.current" />
-                          Progress:
-                          <input type="text" v-model="tracker.progress" />
-                          <button v-on:click="updateTracker(tracker)">
-                            Edit Tracker
-                          </button>
-                          <button v-on:click="destroyTracker(tracker)">
-                            Delete
-                          </button>
-                        </div></small
-                      >
+                        </li>
+                      </ul>
                     </td>
-                    <td class="text-muted text-end">
-                      {{ tracker.media_type }}
+                    <td class="text-end">
+                      <ul
+                        class="pagination justify-content-flex-end mb-0 mt-3 mt-sm-0"
+                      >
+                        <li class="page-item">
+                          <div v-if="!tracker.isEdit">
+                            <a class="page-link" v-on:click="show(tracker)"
+                              >Edit</a
+                            >
+                          </div>
+                        </li>
+                      </ul>
+                      <div v-if="tracker.isEdit">
+                        Current:
+                        <input type="text" v-model="tracker.current" />
+                        Progress:
+                        <input type="text" v-model="tracker.progress" />
+                        <button v-on:click="updateTracker(tracker)">
+                          Edit Tracker
+                        </button>
+                        <button v-on:click="destroyTracker(tracker)">
+                          Delete
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 </tbody>
@@ -302,9 +321,11 @@ export default {
                     </th>
                     <th
                       scope="col"
-                      class="fw-normal text-end text-muted py-4"
-                      style="width: 150px; min-width: 150px"
-                    ></th>
+                      class="fw-normal text-center text-muted py-4"
+                      style="width: 1px; min-width: 1px"
+                    >
+                      Create
+                    </th>
                   </tr>
                 </thead>
 
@@ -383,17 +404,23 @@ export default {
                       </div>
                       <!--end process box-->
                     </td>
-                    <td class="text-muted text-end">
-                      <div v-if="!medium.isEdit">
-                        <button v-on:click="show(medium)">Add</button>
-                      </div>
-                      <div v-if="medium.isEdit">
-                        Current:
-                        <input type="text" v-model="medium.current" />
-                        <button v-on:click="createTracker(medium)">
-                          Create Tracker
-                        </button>
-                      </div>
+                    <td class="text-muted">
+                      <ul class="pagination justify-content-end">
+                        <li class="page-item">
+                          <div v-if="!medium.isEdit">
+                            <a class="page-link" v-on:click="show(medium)"
+                              >Add</a
+                            >
+                          </div>
+                        </li>
+                        <div v-if="medium.isEdit">
+                          Current:
+                          <input type="text" v-model="medium.current" />
+                          <button v-on:click="createTracker(medium)">
+                            Create Tracker
+                          </button>
+                        </div>
+                      </ul>
                     </td>
                   </tr>
                 </tbody>
@@ -403,40 +430,37 @@ export default {
           <!--end col-->
 
           <!-- PAGINATION START -->
-          <!-- <div class="col-12 mt-4 pt-2">
-            <div
-              class="d-md-flex align-items-center text-center justify-content-between"
-            >
-              <span class="text-muted me-3"></span>
-              <ul class="pagination justify-content-center mb-0 mt-3 mt-sm-0">
-                <li class="page-item">
-                  <a
-                    class="page-link"
-                    href="javascript:void(0)"
-                    aria-label="Previous"
-                    >Prev</a
-                  >
-                </li>
-                <li class="page-item active">
-                  <a class="page-link" href="javascript:void(0)">1</a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link" href="javascript:void(0)">2</a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link" href="javascript:void(0)">3</a>
-                </li>
-                <li class="page-item">
-                  <a
-                    class="page-link"
-                    href="javascript:void(0)"
-                    aria-label="Next"
-                    >Next</a
-                  >
-                </li>
-              </ul>
-            </div>
+          <!-- <div class="col-12 mt-4 pt-2"> -->
+          <!-- <div
+            class="d-md-flex align-items-center text-center justify-content-between"
+          >
+            <span class="text-muted me-3"></span>
+            <ul class="pagination justify-content-center mb-0 mt-3 mt-sm-0">
+              <li class="page-item">
+                <a
+                  class="page-link"
+                  href="javascript:void(0)"
+                  aria-label="Previous"
+                  >Prev</a
+                >
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="javascript:void(0)">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0)">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0)">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0)" aria-label="Next"
+                  >Next</a
+                >
+              </li>
+            </ul>
           </div> -->
+          <!-- </div> -->
           <!--end col-->
           <!-- PAGINATION END -->
         </div>
