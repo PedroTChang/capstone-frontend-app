@@ -1,3 +1,20 @@
+<script>
+// import axios from "axios"; // eslint-disable-line
+
+export default {
+  data: function () {
+    return {
+      isLoggedIn: false,
+    };
+  },
+  watch: {
+    $route: function () {
+      this.isLoggedIn = !!localStorage.jwt;
+    },
+  },
+};
+</script>
+
 <template>
   <div id="app">
     <!-- HEADER -->
@@ -50,12 +67,14 @@
             <li>
               <a href="/" class="sub-menu-item">Tracker</a>
             </li>
-            <li>
+            <li class="nav-item" v-if="!isLoggedIn">
               <a href="/login" class="sub-menu-item">Login</a>
             </li>
-            <li><a href="/signup" class="sub-menu-item">Signup</a></li>
-            <li>
-              <a href="/signout" class="sub-menu-item">Signout</a>
+            <li class="nav-item" v-if="!isLoggedIn">
+              <a href="/signup" class="sub-menu-item">Signup</a>
+            </li>
+            <li class="nav-item" v-if="isLoggedIn">
+              <a href="/logout" class="sub-menu-item">Logout</a>
             </li>
           </ul>
           <!--end navigation menu-->
