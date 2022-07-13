@@ -38,7 +38,7 @@ export default {
         <ul class="buy-button list-inline mb-0">
           <li class="list-inline-item search-icon mb-0">
             <a
-              href="javascript:void(0)"
+              href="/"
               data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasRight"
               aria-controls="offcanvasRight"
@@ -399,7 +399,7 @@ export default {
                 onclick="topFunction()"
                 id="back-to-top"
                 class="btn btn-pills btn-icon btn-primary back-to-top"
-                ><i data-feather="arrow-up" class="icons"></i
+                ><i class="uil uil-top-arrow-from-top"></i
               ></a>
             </div>
           </div>
@@ -411,6 +411,277 @@ export default {
     </footer>
     <!--end footer-->
     <!-- Footer End -->
+
+    <!-- Offcanvas Start -->
+    <div
+      class="offcanvas offcanvas-end bg-white shadow"
+      tabindex="-1"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header p-4 border-bottom">
+        <h6 id="offcanvasRightLabel" class="mb-0">OTAKUTRACKER</h6>
+        <button
+          type="button"
+          class="btn-close d-flex align-items-center text-dark"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        >
+          <i class="uil uil-times fs-4"></i>
+        </button>
+      </div>
+      <div class="offcanvas-body p-4">
+        <div class="row">
+          <div class="col-12">
+            <div class="card border-0" style="z-index: 1">
+              <div class="card-body p-0">
+                <form class="login-form">
+                  <div class="row">
+                    <div class="col-12">
+                      <img
+                        src="/images/otakutracker-icon.png"
+                        class="avatar avatar-large d-block mx-auto my-5"
+                        alt=""
+                      />
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-lg-12 mt-4">
+                      <div class="mb-3">
+                        <label class="form-label"
+                          >Your Email <span class="text-danger">*</span></label
+                        >
+                        <div class="form-icon position-relative">
+                          <i data-feather="user" class="fea icon-sm icons"></i>
+                          <input
+                            type="email"
+                            class="form-control ps-5"
+                            placeholder="Email"
+                            name="email"
+                            required=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-lg-12">
+                      <div class="mb-3">
+                        <label class="form-label"
+                          >Password <span class="text-danger">*</span></label
+                        >
+                        <div class="form-icon position-relative">
+                          <i data-feather="key" class="fea icon-sm icons"></i>
+                          <input
+                            type="password"
+                            class="form-control ps-5"
+                            placeholder="Password"
+                            required=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-lg-12">
+                      <div class="d-flex justify-content-between">
+                        <div class="mb-3">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckDefault"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexCheckDefault"
+                              >Remember me</label
+                            >
+                          </div>
+                        </div>
+                        <small class="forgot-pass mb-0"
+                          ><a href="reset-password.html" class="text-dark"
+                            >Forgot password ?</a
+                          ></small
+                        >
+                      </div>
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-lg-12 mb-0">
+                      <div class="d-grid">
+                        <button class="btn btn-primary">Sign in</button>
+                      </div>
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-12 text-center mt-3">
+                      <small
+                        ><small class="text-dark me-2"
+                          >Don't have an account ?</small
+                        >
+                        <a href="signup.html" class="text-dark"
+                          >Sign Up</a
+                        ></small
+                      >
+                    </div>
+                    <!--end col-->
+                  </div>
+                  <!--end row-->
+                </form>
+              </div>
+            </div>
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+      </div>
+
+      <div class="offcanvas-footer p-4 text-center">
+        <ul class="list-unstyled social-icon social mb-0">
+          <li class="list-inline-item mb-0">
+            <a
+              href="https://wrapbootstrap.com/theme/upcrypto-nft-cryptocurrency-template-WB0580331?ref=shreethemesstudio"
+              target="_blank"
+              class="rounded"
+              ><i class="uil uil-shopping-cart align-middle" title="Buy Now"></i
+            ></a>
+          </li>
+          <li class="list-inline-item mb-0">
+            <a
+              href="https://dribbble.com/shreethemes"
+              target="_blank"
+              class="rounded"
+              ><i class="uil uil-dribbble align-middle" title="dribbble"></i
+            ></a>
+          </li>
+          <li class="list-inline-item mb-0">
+            <a
+              href="https://www.facebook.com/shreethemes"
+              target="_blank"
+              class="rounded"
+              ><i class="uil uil-facebook-f align-middle" title="facebook"></i
+            ></a>
+          </li>
+          <li class="list-inline-item mb-0">
+            <a
+              href="https://www.instagram.com/shreethemes/"
+              target="_blank"
+              class="rounded"
+              ><i class="uil uil-instagram align-middle" title="instagram"></i
+            ></a>
+          </li>
+          <li class="list-inline-item mb-0">
+            <a
+              href="https://twitter.com/shreethemes"
+              target="_blank"
+              class="rounded"
+              ><i class="uil uil-twitter align-middle" title="twitter"></i
+            ></a>
+          </li>
+          <li class="list-inline-item mb-0">
+            <a href="mailto:support@shreethemes.in" class="rounded"
+              ><i class="uil uil-envelope align-middle" title="email"></i
+            ></a>
+          </li>
+          <li class="list-inline-item mb-0">
+            <a href="https://shreethemes.in" target="_blank" class="rounded"
+              ><i class="uil uil-globe align-middle" title="website"></i
+            ></a>
+          </li>
+        </ul>
+        <!--end icon-->
+      </div>
+    </div>
+    <!-- Offcanvas End -->
+
+    <!-- Style switcher -->
+    <div
+      id="style-switcher"
+      class="bg-light border p-3 pt-2 pb-2"
+      onclick="toggleSwitcher()"
+    >
+      <div>
+        <h6 class="title text-center">Select Your Color</h6>
+        <ul class="pattern">
+          <li class="list-inline-item">
+            <a
+              class="color1"
+              href="javascript:void(0);"
+              onclick="setColor('default')"
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="color2"
+              href="javascript:void(0);"
+              onclick="setColor('green')"
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="color3"
+              href="javascript:void(0);"
+              onclick="setColor('purple')"
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="color4"
+              href="javascript:void(0);"
+              onclick="setColor('red')"
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="color5"
+              href="javascript:void(0);"
+              onclick="setColor('skobleoff')"
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="color6"
+              href="javascript:void(0);"
+              onclick="setColor('yellow')"
+            ></a>
+          </li>
+        </ul>
+
+        <h6 class="title text-center pt-3 mb-0 border-top">Theme Option</h6>
+        <ul class="text-center list-unstyled mb-0">
+          <!-- <li class="d-grid"><a href="javascript:void(0)" class="btn btn-sm btn-block btn-primary rtl-version t-rtl-light mt-2" onclick="setTheme('style-rtl')">RTL</a></li>
+                    <li class="d-grid"><a href="javascript:void(0)" class="btn btn-sm btn-block btn-primary ltr-version t-ltr-light mt-2" onclick="setTheme('style')">LTR</a></li>
+                    <li class="d-grid"><a href="javascript:void(0)" class="btn btn-sm btn-block btn-primary dark-rtl-version t-rtl-dark mt-2" onclick="setTheme('style-dark-rtl')">RTL</a></li>
+                    <li class="d-grid"><a href="javascript:void(0)" class="btn btn-sm btn-block btn-primary dark-ltr-version t-ltr-dark mt-2" onclick="setTheme('style-dark')">LTR</a></li> -->
+          <li class="d-grid">
+            <a
+              href="javascript:void(0)"
+              class="btn btn-sm btn-block btn-dark dark-version t-dark mt-2"
+              onclick="setTheme('style-dark')"
+              >Dark</a
+            >
+          </li>
+          <li class="d-grid">
+            <a
+              href="javascript:void(0)"
+              class="btn btn-sm btn-block btn-dark light-version t-light mt-2"
+              onclick="setTheme('style')"
+              >Light</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <a href="javascript:void(0);" class="settings bg-white shadow d-block"
+          ><i
+            class="mdi mdi-cog ms-1 mdi-24px position-absolute mdi-spin text-primary"
+          ></i
+        ></a>
+      </div>
+    </div>
+    <!-- end Style switcher -->
   </div>
 </template>
 

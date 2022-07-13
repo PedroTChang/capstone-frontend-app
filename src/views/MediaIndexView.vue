@@ -76,8 +76,12 @@ export default {
   <div
     class="media-index"
     style="
-      background: url('/images/bg/purple-house.jpeg');
-      background-size: contain;
+      background: url('/images/bg/purple-house.jpeg') no-repeat center center
+        fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
     "
   >
     <!-- Start -->
