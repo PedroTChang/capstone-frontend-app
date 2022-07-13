@@ -53,12 +53,11 @@ export default {
         <div class="menu-extras">
           <div class="menu-item">
             <!-- Mobile menu toggle-->
-            <a class="navbar-toggle" id="isToggle" v-on:click="toggleMenu()">
+            <a class="navbar-toggle" id="isToggle" on:click="toggleMenu()">
               <div class="lines">
-                <span>Tracker</span>
-                <span>Login</span>
-                <span>Signup</span>
-                <span>Logout</span>
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
             </a>
             <!-- End mobile menu toggle-->
@@ -81,6 +80,7 @@ export default {
               <a href="/logout" class="sub-menu-item">Logout</a>
             </li>
           </ul>
+
           <!--end navigation menu-->
         </div>
         <!--end navigation-->

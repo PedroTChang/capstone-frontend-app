@@ -136,15 +136,13 @@ export default {
                       class="fw-normal text-left text-muted py-4"
                       style="width: 150px; min-width: 150px"
                     >
-                      Current
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Current
                     </th>
                     <th
                       scope="col"
                       class="fw-normal text-right text-muted py-4"
                       style="width: 25px; min-width: 25px"
-                    >
-                      Update
-                    </th>
+                    ></th>
                   </tr>
                 </thead>
 
@@ -203,21 +201,23 @@ export default {
                     <td class="text-justified">
                       <ul class="list-unstyled text-warning mb-0">
                         <li class="list-inline-item mb-0">
-                          &nbsp;&nbsp;&nbsp;&nbsp;{{ tracker.current }}
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          {{ tracker.current }}
                         </li>
                       </ul>
                     </td>
-                    <td class="text-center">
+                    <td class="text-left">
                       <ul
-                        class="pagination justify-content-flex-end mb-0 mt-3 mt-sm-0"
+                        class="pagination justify-content-center mb-0 mt-3 mt-sm-0"
                       >
                         <li class="page-item">
                           <div v-if="!tracker.isEdit">
                             <a
-                              class="btn btn-primary btn-sm"
+                              class="btn btn-icon btn-pills btn-primary"
                               v-on:click="show(tracker)"
-                              >Edit</a
                             >
+                              <i class="uil uil-edit"></i>
+                            </a>
                           </div>
                         </li>
                       </ul>
@@ -240,19 +240,32 @@ export default {
                             id="inputsm"
                           />
                           <a
-                            class="btn btn-primary btn-sm"
+                            class="btn btn-icon btn-pills btn-secondary"
                             v-on:click="updateTracker(tracker)"
-                            ><label for="inputsm">Edit</label>
-                          </a>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          <a
-                            class="btn btn-primary btn-sm"
-                            v-on:click="destroyTracker(tracker)"
                           >
-                            Delete
+                            <i class="uil uil-edit"></i>
                           </a>
                         </div>
                       </div>
+                    </td>
+                    <td
+                      class="text-left"
+                      style="position: relative; left: -3100"
+                    >
+                      <ul
+                        class="pagination justify-content-center mb-0 mt-3 mt-sm-0"
+                      >
+                        <li class="page-item">
+                          <div v-if="!tracker.isEdit">
+                            <a
+                              class="btn btn-icon btn-pills btn-primary"
+                              v-on:click="destroyTracker(tracker)"
+                            >
+                              <i class="mdi mdi-delete"></i>
+                            </a>
+                          </div>
+                        </li>
+                      </ul>
                     </td>
                   </tr>
                 </tbody>
@@ -430,12 +443,24 @@ export default {
                         </li>
                         <div v-if="medium.isEdit">
                           Current:
-                          <input type="text" v-model="medium.current" />
+                          <input
+                            type="text"
+                            v-model="medium.current"
+                            style="width: 50px"
+                            class="form-control input-sm"
+                            id="inputsm"
+                          />
                           <a
-                            class="btn btn-primary btn-sm"
+                            class="btn btn-secondary"
                             v-on:click="createTracker(medium)"
                           >
-                            Create
+                            <i class="mdi mdi-content-save"></i>
+                          </a>
+                          <a
+                            class="btn btn-secondary btn-sm"
+                            v-on:click="show(medium)"
+                          >
+                            <i class="mdi mdi-close"></i>
                           </a>
                         </div>
                       </ul>
