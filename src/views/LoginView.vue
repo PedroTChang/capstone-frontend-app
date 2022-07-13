@@ -33,7 +33,10 @@ export default {
   <div class="login">
     <section
       class="bg-home d-flex align-items-center position-relative"
-      style="background: url('/images/bg/umbrellaaaa.jpg') center"
+      style="
+        background: url('/images/bg/anime-bg.jpg');
+        background-size: contain;
+      "
     >
       <div class="bg-overlay bg-gradient-primary opacity-8"></div>
       <div class="container">
@@ -209,22 +212,5 @@ export default {
       </div>
     </div>
     <!-- end Style switcher -->
-  </div>
-  <div class="login">
-    <form v-on:submit.prevent="submit()">
-      <h1>Login</h1>
-      <ul>
-        <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
-      </ul>
-      <div>
-        <label>Email:</label>
-        <input type="email" v-model="newSessionParams.email" />
-      </div>
-      <div>
-        <label>Password:</label>
-        <input type="password" v-model="newSessionParams.password" />
-      </div>
-      <input type="submit" value="Submit" />
-    </form>
   </div>
 </template>

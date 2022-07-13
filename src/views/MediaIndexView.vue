@@ -73,7 +73,13 @@ export default {
 </script>
 
 <template>
-  <div class="media-index">
+  <div
+    class="media-index"
+    style="
+      background: url('/images/bg/purple-house.jpeg');
+      background-size: contain;
+    "
+  >
     <!-- Start -->
     <section class="section">
       <div class="container">

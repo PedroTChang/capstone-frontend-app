@@ -28,7 +28,10 @@ export default {
   <div class="signup">
     <section
       class="bg-home d-flex align-items-center position-relative"
-      style="background: url('/images/bg/goku-utra-instinct.webp') center"
+      style="
+        background: url('/images/bg/anime-bg.jpg');
+        background-size: contain;
+      "
     >
       <div class="bg-overlay bg-gradient-primary opacity-8"></div>
       <div class="container">
