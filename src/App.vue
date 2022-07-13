@@ -22,7 +22,7 @@ export default {
     <header id="topnav" class="defaultscroll sticky">
       <div class="container">
         <!-- Logo Start-->
-        <a class="logo" href="index.html">
+        <a class="logo" href="/">
           <span class="logo-light-mode">
             <img src="/images/logo-dark.png" alt="" />
           </span>
@@ -87,7 +87,7 @@ export default {
     <!-- Navbar End -->
 
     <!-- Hero Start -->
-    <section class="bg-half-170 bg-light d-table w-100">
+    <!-- <section class="bg-half-170 bg-light d-table w-100">
       <div class="container position-relative" style="z-index: 1">
         <div class="row justify-content-center mt-5">
           <div class="col-12">
@@ -98,11 +98,8 @@ export default {
               </p>
             </div>
           </div>
-          <!--end col-->
         </div>
-        <!--end row-->
       </div>
-      <!--end container-->
 
       <div class="position-absolute top-50 start-50 translate-middle">
         <img
@@ -112,7 +109,7 @@ export default {
           alt=""
         />
       </div>
-    </section>
+    </section> -->
     <!--end section-->
     <!-- Hero End -->
 
@@ -127,13 +124,10 @@ export default {
             <div class="footer-py-100">
               <div class="row">
                 <div class="col-lg-4 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
-                  <a href="#" class="logo-footer">
+                  <!-- <a href="/" class="logo-footer">
                     <img src="/images/logo-light.png" alt="" />
-                  </a>
-                  <p class="text-foot mt-4">
-                    With Upcrypto Trade, you can be sure your trading skills are
-                    matched with excellent service.
-                  </p>
+                  </a> -->
+                  <p class="text-foot mt-4">Track your favorite anime!</p>
                   <ul
                     class="list-unstyled social-icon foot-social-icon mb-0 mt-4"
                   >
@@ -232,7 +226,7 @@ export default {
                 </div>
                 <!--end col-->
 
-                <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                <!-- <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
                   <h5 class="text-light footer-head">Company</h5>
                   <ul class="list-unstyled footer-list mt-4">
                     <li>
@@ -284,10 +278,10 @@ export default {
                       >
                     </li>
                   </ul>
-                </div>
+                </div> -->
                 <!--end col-->
 
-                <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                <!-- <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
                   <h5 class="text-light footer-head">Products</h5>
                   <ul class="list-unstyled footer-list mt-4">
                     <li>
@@ -332,10 +326,10 @@ export default {
                       >
                     </li>
                   </ul>
-                </div>
+                </div> -->
                 <!--end col-->
 
-                <div class="col-lg-4 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                <!-- <div class="col-lg-4 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
                   <h5 class="text-light footer-head">
                     Start trading with Upcrypto
                   </h5>
@@ -360,7 +354,7 @@ export default {
                     class="avatar avatar-medium mt-4"
                     alt=""
                   />
-                </div>
+                </div> -->
                 <!--end col-->
               </div>
               <!--end row-->
@@ -381,14 +375,14 @@ export default {
                 <!-- <script>
                   document.write(new Date().getFullYear());
                 </script> -->
-                Upcrypto. Design with
-                <i class="mdi mdi-heart text-danger"></i> by
+                OtakuTracker by Pedro T Chang
+                <!-- <i class="mdi mdi-heart text-danger"></i> by
                 <a
                   href="https://shreethemes.in/"
                   target="_blank"
                   class="text-reset"
                   >Shreethemes</a
-                >.
+                >. -->
               </p>
             </div>
           </div>
