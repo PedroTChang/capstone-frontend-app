@@ -24,9 +24,13 @@ export default {
         <!-- Logo Start-->
         <a class="logo" href="/">
           <span class="logo-light-mode">
-            <img src="/images/logo-dark.png" alt="" />
+            <img src="/images/otakutracker-light.png" alt="" />
           </span>
-          <img src="/images/logo-light.png" class="logo-dark-mode" alt="" />
+          <img
+            src="/images/otakutracker-light.png"
+            class="logo-dark-mode"
+            alt=""
+          />
         </a>
         <!-- Logo end-->
 

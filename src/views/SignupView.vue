@@ -28,7 +28,7 @@ export default {
   <div class="signup">
     <section
       class="bg-home d-flex align-items-center position-relative"
-      style="background: url('/images/bg/user.jpg') center"
+      style="background: url('/images/bg/goku-utra-instinct.webp') center"
     >
       <div class="bg-overlay bg-gradient-primary opacity-8"></div>
       <div class="container">
@@ -43,7 +43,7 @@ export default {
                 </ul>
                 <a href="index.html"
                   ><img
-                    src="/images/icon-gradient.png"
+                    src="/images/otakutracker-icon.png"
                     class="avatar avatar-md-md mb-4 d-block mx-auto"
                     alt=""
                 /></a>
