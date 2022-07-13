@@ -191,26 +191,26 @@ export default {
                     </td>
                     <td class="text-center">
                       <ul class="list-unstyled text-warning mb-0">
-                        <li class="list-inline-item mb-0 text-muted small">
+                        <li class="list-inline-item mb-0">
                           {{ tracker.latest }}
                         </li>
                       </ul>
                     </td>
-                    <td class="text-center">
+                    <td class="text-justified">
                       <ul class="list-unstyled text-warning mb-0">
-                        <li class="list-inline-item mb-0 text-muted small">
-                          {{ tracker.current }}
+                        <li class="list-inline-item mb-0">
+                          &nbsp;&nbsp;&nbsp;&nbsp;{{ tracker.current }}
                         </li>
                       </ul>
                     </td>
-                    <td class="text-end">
+                    <td class="text-center">
                       <ul
                         class="pagination justify-content-flex-end mb-0 mt-3 mt-sm-0"
                       >
                         <li class="page-item">
                           <div v-if="!tracker.isEdit">
                             <a
-                              class="btn btn-primary"
+                              class="btn btn-primary btn-sm"
                               v-on:click="show(tracker)"
                               >Edit</a
                             >
@@ -218,19 +218,36 @@ export default {
                         </li>
                       </ul>
                       <div v-if="tracker.isEdit">
-                        Current:
-                        <input type="text" v-model="tracker.current" />
-                        Progress:
-                        <input type="text" v-model="tracker.progress" />
-                        <a
-                          class="btn btn-soft-primary"
-                          v-on:click="updateTracker(tracker)"
-                        >
-                          Edit Tracker
-                        </a>
-                        <button v-on:click="destroyTracker(tracker)">
-                          Delete
-                        </button>
+                        <div class="col-xs-1">
+                          Current:
+                          <input
+                            type="text"
+                            v-model="tracker.current"
+                            style="width: 50px"
+                            class="form-control input-sm"
+                            id="inputsm"
+                          />
+                          Progress:
+                          <input
+                            type="text"
+                            v-model="tracker.progress"
+                            style="width: 90px"
+                            class="form-control input-sm"
+                            id="inputsm"
+                          />
+                          <a
+                            class="btn btn-primary btn-sm"
+                            v-on:click="updateTracker(tracker)"
+                            ><label for="inputsm">Edit</label>
+                          </a>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <a
+                            class="btn btn-primary btn-sm"
+                            v-on:click="destroyTracker(tracker)"
+                          >
+                            Delete
+                          </a>
+                        </div>
                       </div>
                     </td>
                   </tr>
@@ -322,7 +339,7 @@ export default {
                       class="fw-normal text-center text-muted py-4"
                       style="width: 200px; min-width: 150px"
                     >
-                      Type
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type
                     </th>
                     <th
                       scope="col"
@@ -381,46 +398,28 @@ export default {
                     </td>
                     <td class="text-center">
                       <ul class="list-unstyled text-warning mb-0">
-                        <!-- <li class="list-inline-item mb-0">
-                          <i class="mdi mdi-star"></i>
-                        </li>
                         <li class="list-inline-item mb-0">
-                          <i class="mdi mdi-star"></i>
-                        </li>
-                        <li class="list-inline-item mb-0">
-                          <i class="mdi mdi-star"></i>
-                        </li>
-                        <li class="list-inline-item mb-0">
-                          <i class="mdi mdi-star"></i>
-                        </li>
-                        <li class="list-inline-item mb-0">
-                          <i class="mdi mdi-star-half"></i>
-                        </li> -->
-                        <li class="list-inline-item mb-0 text-muted small">
-                          {{ medium.media_type }}
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{
+                            medium.media_type
+                          }}
                         </li>
                       </ul>
                     </td>
-                    <td class="text-center">
-                      <div class="progress-box px-3">
-                        <small class="title text-muted mb-0">{{
-                          medium.latest
-                        }}</small>
 
-                        <!-- <div class="progress rounded-md mt-2">
-                          <div
-                            class="progress-bar position-relative bg-gradient-primary rounded-md"
-                            style="width: 60%"
-                          ></div>
-                        </div> -->
-                      </div>
-                      <!--end process box-->
+                    <td class="text-center">
+                      <ul class="list-unstyled text-warning mb-0">
+                        <li class="list-inline-item mb-0">
+                          {{ medium.latest }}
+                        </li>
+                      </ul>
                     </td>
                     <td class="text-muted">
                       <ul class="pagination justify-content-end">
                         <li class="page-item">
                           <div v-if="!medium.isEdit">
-                            <a class="btn btn-primary" v-on:click="show(medium)"
+                            <a
+                              class="btn btn-primary btn-sm"
+                              v-on:click="show(medium)"
                               >Add</a
                             >
                           </div>
@@ -429,7 +428,7 @@ export default {
                           Current:
                           <input type="text" v-model="medium.current" />
                           <a
-                            class="btn btn-primary"
+                            class="btn btn-primary btn-sm"
                             v-on:click="createTracker(medium)"
                           >
                             Create
