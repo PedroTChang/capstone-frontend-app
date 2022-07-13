@@ -50,9 +50,10 @@ export default {
           </li>
         </ul>
         <!--Login button End-->
-        <div class="menu-extras">
+
+        <!-- Mobile menu toggle-->
+        <!-- <div class="menu-extras">
           <div class="menu-item">
-            <!-- Mobile menu toggle-->
             <a class="navbar-toggle" id="isToggle" on:click="toggleMenu()">
               <div class="lines">
                 <span></span>
@@ -60,9 +61,9 @@ export default {
                 <span></span>
               </div>
             </a>
-            <!-- End mobile menu toggle-->
           </div>
-        </div>
+        </div> -->
+        <!-- End mobile menu toggle-->
 
         <div id="navigation">
           <!-- Navigation Menu-->
