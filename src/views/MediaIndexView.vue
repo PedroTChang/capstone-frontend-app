@@ -1,5 +1,6 @@
 <script>
 import axios from "axios";
+// import "/public/css/materialdesignicons.css.map";
 
 export default {
   data: function () {
@@ -202,7 +203,9 @@ export default {
                       >
                         <li class="page-item">
                           <div v-if="!tracker.isEdit">
-                            <a class="page-link" v-on:click="show(tracker)"
+                            <a
+                              class="btn btn-primary"
+                              v-on:click="show(tracker)"
                               >Edit</a
                             >
                           </div>
@@ -213,9 +216,12 @@ export default {
                         <input type="text" v-model="tracker.current" />
                         Progress:
                         <input type="text" v-model="tracker.progress" />
-                        <button v-on:click="updateTracker(tracker)">
+                        <a
+                          class="btn btn-soft-primary"
+                          v-on:click="updateTracker(tracker)"
+                        >
                           Edit Tracker
-                        </button>
+                        </a>
                         <button v-on:click="destroyTracker(tracker)">
                           Delete
                         </button>
@@ -408,7 +414,7 @@ export default {
                       <ul class="pagination justify-content-end">
                         <li class="page-item">
                           <div v-if="!medium.isEdit">
-                            <a class="page-link" v-on:click="show(medium)"
+                            <a class="btn btn-primary" v-on:click="show(medium)"
                               >Add</a
                             >
                           </div>
@@ -416,9 +422,12 @@ export default {
                         <div v-if="medium.isEdit">
                           Current:
                           <input type="text" v-model="medium.current" />
-                          <button v-on:click="createTracker(medium)">
-                            Create Tracker
-                          </button>
+                          <a
+                            class="btn btn-primary"
+                            v-on:click="createTracker(medium)"
+                          >
+                            Create
+                          </a>
                         </div>
                       </ul>
                     </td>
