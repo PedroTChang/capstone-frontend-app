@@ -141,11 +141,11 @@ export default {
                     >
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Current
                     </th>
-                    <th
+                    <!-- <th
                       scope="col"
                       class="fw-normal text-right text-muted py-4"
                       style="width: 25px; min-width: 25px"
-                    ></th>
+                    ></th> -->
                   </tr>
                 </thead>
 

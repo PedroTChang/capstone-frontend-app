@@ -419,6 +419,7 @@ export default {
       tabindex="-1"
       id="offcanvasRight"
       aria-labelledby="offcanvasRightLabel"
+      v-if="!isLoggedIn"
     >
       <div class="offcanvas-header p-4 border-bottom">
         <h6 id="offcanvasRightLabel" class="mb-0">OTAKUTRACKER</h6>
@@ -436,7 +437,7 @@ export default {
           <div class="col-12">
             <div class="card border-0" style="z-index: 1">
               <div class="card-body p-0">
-                <form class="login-form">
+                <form class="login-form" v-on:submit.prevent="submit()">
                   <div class="row">
                     <div class="col-12">
                       <img
