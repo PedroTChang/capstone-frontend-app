@@ -88,7 +88,6 @@ export default {
           </h2>
         </div>
       </div>
-      <!--end col-->
 
       <div class="col-lg-3 col-md-6 mt-4 pt-2">
         <div class="text-center">
