@@ -50,6 +50,9 @@ export default {
     show: function (item) {
       item.isEdit = true;
     },
+    close: function (item) {
+      item.isEdit = false;
+    },
     updateTracker: function (tracker) {
       axios
         .patch("/trackers/" + tracker.id + ".json", tracker)
@@ -245,6 +248,12 @@ export default {
                           >
                             <i class="uil uil-edit"></i>
                           </a>
+                          <a
+                            class="btn btn-icon btn-pills btn-secondary"
+                            v-on:click="close(tracker)"
+                          >
+                            <i class="mdi mdi-close-circle"></i>
+                          </a>
                         </div>
                       </div>
                     </td>
@@ -258,7 +267,7 @@ export default {
                         <li class="page-item">
                           <div v-if="!tracker.isEdit">
                             <a
-                              class="btn btn-icon btn-pills btn-primary"
+                              class="btn btn-icon btn-pills btn-danger"
                               v-on:click="destroyTracker(tracker)"
                             >
                               <i class="mdi mdi-delete"></i>
@@ -435,10 +444,10 @@ export default {
                         <li class="page-item">
                           <div v-if="!medium.isEdit">
                             <a
-                              class="btn btn-primary btn-sm"
+                              class="btn btn-icon btn-primary btn-md"
                               v-on:click="show(medium)"
-                              >Add</a
-                            >
+                              ><i class="mdi mdi-content-save"></i
+                            ></a>
                           </div>
                         </li>
                         <div v-if="medium.isEdit">
@@ -450,17 +459,24 @@ export default {
                             class="form-control input-sm"
                             id="inputsm"
                           />
+                          <div class="form-group">
+                            <a
+                              id="button1id"
+                              name="button1id"
+                              class="btn btn-icon btn-secondary"
+                              v-on:click="createTracker(medium)"
+                            >
+                              <i class="mdi mdi-content-save-edit"></i>
+                            </a>
+                          </div>
+                          <div class="form-group"></div>
                           <a
-                            class="btn btn-secondary"
-                            v-on:click="createTracker(medium)"
+                            id="button2id"
+                            name="button2id"
+                            class="btn btn-icon btn-secondary"
+                            v-on:click="close(medium)"
                           >
-                            <i class="mdi mdi-content-save"></i>
-                          </a>
-                          <a
-                            class="btn btn-secondary btn-sm"
-                            v-on:click="show(medium)"
-                          >
-                            <i class="mdi mdi-close"></i>
+                            <i class="mdi mdi-close-box"></i>
                           </a>
                         </div>
                       </ul>
@@ -516,4 +532,8 @@ export default {
   </div>
 </template>
 
-<style></style>
+<style>
+.form-group {
+  display: inline-block;
+}
+</style>
