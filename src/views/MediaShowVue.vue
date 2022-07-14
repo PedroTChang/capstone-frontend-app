@@ -6,6 +6,10 @@ export default {
     return {
       medium: {},
       images: {},
+      trackers: [],
+      newTrackerParams: {},
+      isLoggedIn: false,
+      currentTracker: {},
     };
   },
   created: function () {
@@ -14,9 +18,29 @@ export default {
       this.medium = response.data;
     });
   },
+  watch: {
+    $route: function () {
+      this.isLoggedin = !!localStorage.jwt;
+    },
+  },
   methods: {
-    createTracker() {
+    createTracker(medium) {
       this.$emit("Successfully Added");
+      var tracker = {
+        medium_id: medium.id,
+        current: medium.current,
+        progress: medium.progress,
+      };
+      axios
+        .post("/trackers.json", tracker)
+        .then((response) => {
+          console.log("tracker create", response);
+          this.trackers.push(response.data);
+          this.newTrackerParams = {};
+        })
+        .catch((error) => {
+          console.log("trackers create error", error.response);
+        });
     },
   },
 };
@@ -49,11 +73,15 @@ export default {
 
     <div class="row justify-content-center">
       <div class="col-lg-3 col-md-6 mt-4 pt-2">
-        <div class="text-center">
+        <div class="text-center" v-if="!isLoggedin">
           <h5 class="text-muted mb-0"></h5>
           <h2 class="mb-0 display-5 mt-4 fw-bold text-primary">
             <span class="counter-value" data-target="2021"
-              ><router-link class="btn btn-primary btn-lg" router-link to="/"
+              ><router-link
+                class="btn btn-primary btn-lg"
+                v-on:click="createTracker(medium)"
+                router-link
+                to="/"
                 >Track</router-link
               ></span
             >
