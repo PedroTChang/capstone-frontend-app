@@ -1,15 +1,37 @@
 <script>
 // import axios from "axios"; // eslint-disable-line
+import axios from "axios";
 
 export default {
   data: function () {
     return {
+      newSessionParams: {},
+      errors: [],
       isLoggedIn: false,
     };
   },
   watch: {
     $route: function () {
       this.isLoggedIn = !!localStorage.jwt;
+    },
+  },
+  methods: {
+    submit: function () {
+      axios
+        .post("/sessions", this.newSessionParams)
+        .then((response) => {
+          axios.defaults.headers.common["Authorization"] =
+            "Bearer " + response.data.jwt;
+          localStorage.setItem("jwt", response.data.jwt);
+          this.$router.push("/");
+          window.location.reload();
+        })
+        .catch((error) => {
+          console.log(error.response);
+          this.errors = ["Invalid email or password."];
+          this.email = "";
+          this.password = "";
+        });
     },
   },
 };
@@ -461,6 +483,7 @@ export default {
                             placeholder="Email"
                             name="email"
                             required=""
+                            v-model="newSessionParams.email"
                           />
                         </div>
                       </div>
@@ -479,6 +502,7 @@ export default {
                             class="form-control ps-5"
                             placeholder="Password"
                             required=""
+                            v-model="newSessionParams.password"
                           />
                         </div>
                       </div>
@@ -513,7 +537,13 @@ export default {
 
                     <div class="col-lg-12 mb-0">
                       <div class="d-grid">
-                        <button class="btn btn-primary">Sign in</button>
+                        <button
+                          class="btn btn-primary"
+                          type="submit"
+                          data-bs-dismiss="offcanvas"
+                        >
+                          Sign in
+                        </button>
                       </div>
                     </div>
                     <!--end col-->
@@ -523,9 +553,7 @@ export default {
                         ><small class="text-dark me-2"
                           >Don't have an account ?</small
                         >
-                        <a href="signup.html" class="text-dark"
-                          >Sign Up</a
-                        ></small
+                        <a href="/signup" class="text-dark">Sign Up</a></small
                       >
                     </div>
                     <!--end col-->
