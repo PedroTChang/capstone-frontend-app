@@ -5,8 +5,13 @@ import axios from "axios";
 
 axios.defaults.baseURL =
   process.env.NODE_ENV === "development"
-    ? "https://hidden-reef-58565.herokuapp.com/"
+    ? "https://hidden-reef-58565.herokuapp.com"
     : "/";
+
+//if (process.env.NODE_ENV === 'development') {
+//	axios.defaults.baseURL = ? "https://localhost:8080" : "/"; 
+//} else {
+//	if (window.location.hostname === process.env.en
 
 var jwt = localStorage.getItem("jwt");
 if (jwt) {
